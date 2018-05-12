@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://spiritree.github.io/post/javascript-inherit/</loc>
+    <lastmod>2018-05-12T23:02:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://spiritree.github.io/post/helloworld/</loc>
+    <lastmod>2018-05-12T22:39:49+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://spiritree.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://spiritree.github.io/post/</loc>
+    <lastmod>2018-05-12T23:02:57+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://spiritree.github.io/</loc>
+    <lastmod>2018-05-12T23:02:57+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://spiritree.github.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

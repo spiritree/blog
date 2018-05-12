@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spiritree Blog</title>
+    <link>https://spiritree.github.io/</link>
+    <description>Recent content on Spiritree Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 12 May 2018 23:02:57 +0800</lastBuildDate>
+    
+	<atom:link href="https://spiritree.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JavaScript继承</title>
+      <link>https://spiritree.github.io/post/javascript-inherit/</link>
+      <pubDate>Sat, 12 May 2018 23:02:57 +0800</pubDate>
+      
+      <guid>https://spiritree.github.io/post/javascript-inherit/</guid>
+      <description>组合继承 原型链继承+构造函数继承 缺点：调用两次父构造函数
+function Animal (name) { this.name = name; this.colors = [&#39;red&#39;, &#39;blue&#39;, &#39;green&#39;]; } Animal.prototype.getName = function () { console.log(this.name) } function Cat (name, age) { Animal.call(this, name); this.age = age; } // 第一次调用父类构造函数 Cat.prototype = new Animal(); // 第二次调用父类构造函数 var acat = new Cat(&#39;a&#39;, &#39;1&#39;); acat.colors.push(&#39;black&#39;); console.log(acat.name); // a console.log(acat.age); // 1 console.log(acat.colors); // [&amp;quot;red&amp;quot;, &amp;quot;blue&amp;quot;, &amp;quot;green&amp;quot;, &amp;quot;black&amp;quot;] var bcat = new Cat(&#39;b&#39;, &#39;2&#39;); console.log(bcat.name); // 2 console.</description>
+    </item>
+    
+    <item>
+      <title>Reduce去重</title>
+      <link>https://spiritree.github.io/post/helloworld/</link>
+      <pubDate>Sat, 12 May 2018 22:39:49 +0800</pubDate>
+      
+      <guid>https://spiritree.github.io/post/helloworld/</guid>
+      <description>function filterSort(arr) { arr.reduce((init, curr) =&amp;gt; { if (init.length ===0 || init[init.length - 1] !== curr) { init.push(curr) } return init }, []) }  </description>
+    </item>
+    
+  </channel>
+</rss>

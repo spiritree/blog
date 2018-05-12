@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>Spiritree Blog</title>
+  
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/atom-one-light.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="icon" href="/img/favicon.ico">
+  
+  <meta name="generator" content="Hugo 0.40">
+  
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="Spiritree Blog">
+</head>
+<body class="list">
+  <header class="header">
+    
+    <h1 class="title"><a href="/"><span></span>Spiritree Blog</a></h1>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+
+
+
+
+
+
+
+
+<article class="post first-entry">
+  <header class="post-header">
+    
+    <h2 class="post-title">JavaScript继承</h2>
+  </header>
+  <p class="post-summary">组合继承 原型链继承&#43;构造函数继承 缺点：调用两次父构造函数
+function Animal (name) { this.name = name; this.colors = [&#39;red&#39;, &#39;blue&#39;, &#39;green&#39;]; } Animal.prototype.getName = function () { console.log(this.name) } function Cat (name, age) { Animal.call(this, name); this.age = age; } // 第一次调用父类构造函数 Cat.prototype = new Animal(); // 第二次调用父类构造函数 var acat = new Cat(&#39;a&#39;, &#39;1&#39;); acat.colors.push(&#39;black&#39;); console.log(acat.name); // a console.log(acat.age); // 1 console.log(acat.colors); // [&#34;red&#34;, &#34;blue&#34;, &#34;green&#34;, &#34;black&#34;] var bcat = new Cat(&#39;b&#39;, &#39;2&#39;); console.log(bcat.name); // 2 console....</p>
+  <footer class="post-footer">
+    <p class="post-meta">2018.5.12</p>
+  </footer>
+  <a class="post-link" href="https://spiritree.github.io/post/javascript-inherit/"></a>
+</article>
+
+
+
+
+<article class="post post-entry">
+  <header class="post-header">
+    
+    <h2 class="post-title">Reduce去重</h2>
+  </header>
+  <p class="post-summary">function filterSort(arr) { arr.reduce((init, curr) =&gt; { if (init.length ===0 || init[init.length - 1] !== curr) { init.push(curr) } return init }, []) }  ...</p>
+  <footer class="post-footer">
+    <p class="post-meta">2018.5.12</p>
+  </footer>
+  <a class="post-link" href="https://spiritree.github.io/post/helloworld/"></a>
+</article>
+
+
+
+</main>
+<footer class="footer">
+  <span>&copy; 2017-2018 Spiritree Blog 🎉</span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo❤️️</a></span>
+  <span>&middot;</span>
+  <span>Designed by <a href="http://21beats.com/" target="_blank">️21beats⚡️</a></span>
+</footer>
+<script src="https://cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init();</script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js" data-no-instant></script>
+<script data-no-instant>
+  hljs.initHighlightingOnLoad();
+  menuToggle();
+  InstantClick.on('change', function() {
+    var blocks = document.querySelectorAll('pre code');
+    for (var i = 0; i < blocks.length; i++) {
+      hljs.highlightBlock(blocks[i]);
+    }
+    menuToggle();
+  });
+  function menuToggle() {
+    var $toggle = document.querySelector('.menu-toggle');
+    if (!$toggle.offsetParent) {
+      return;
+    }
+    var $body = document.querySelector('body');
+    $toggle.addEventListener('click', function() {
+      $body.classList.toggle('noscroll');
+    }, false);
+  }
+</script>
+</body>
+</html>
