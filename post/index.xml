@@ -1,33 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Spiritree Blog</title>
-    <link>https://spiritree.github.io/post/</link>
-    <description>Recent content in Posts on Spiritree Blog</description>
+    <title>Posts on 深樹博客</title>
+    <link>https://deeptree.me/post/</link>
+    <description>Recent content in Posts on 深樹博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 May 2018 23:02:57 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 23 Jun 2018 22:42:31 +0800</lastBuildDate>
     
-	<atom:link href="https://spiritree.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://deeptree.me/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>JavaScript继承</title>
-      <link>https://spiritree.github.io/post/javascript-inherit/</link>
-      <pubDate>Sat, 12 May 2018 23:02:57 +0800</pubDate>
-      
-      <guid>https://spiritree.github.io/post/javascript-inherit/</guid>
-      <description>组合继承 原型链继承+构造函数继承 缺点：调用两次父构造函数
-function Animal (name) { this.name = name; this.colors = [&#39;red&#39;, &#39;blue&#39;, &#39;green&#39;]; } Animal.prototype.getName = function () { console.log(this.name) } function Cat (name, age) { Animal.call(this, name); this.age = age; } // 第一次调用父类构造函数 Cat.prototype = new Animal(); // 第二次调用父类构造函数 var acat = new Cat(&#39;a&#39;, &#39;1&#39;); acat.colors.push(&#39;black&#39;); console.log(acat.name); // a console.log(acat.age); // 1 console.log(acat.colors); // [&amp;quot;red&amp;quot;, &amp;quot;blue&amp;quot;, &amp;quot;green&amp;quot;, &amp;quot;black&amp;quot;] var bcat = new Cat(&#39;b&#39;, &#39;2&#39;); console.log(bcat.name); // 2 console.</description>
-    </item>
     
     <item>
-      <title>Reduce去重</title>
-      <link>https://spiritree.github.io/post/helloworld/</link>
-      <pubDate>Sat, 12 May 2018 22:39:49 +0800</pubDate>
+      <title>addEventListener中的passive属性踩坑</title>
+      <link>https://deeptree.me/post/2018/06/passive/</link>
+      <pubDate>Sat, 23 Jun 2018 22:42:31 +0800</pubDate>
       
-      <guid>https://spiritree.github.io/post/helloworld/</guid>
-      <description>function filterSort(arr) { arr.reduce((init, curr) =&amp;gt; { if (init.length ===0 || init[init.length - 1] !== curr) { init.push(curr) } return init }, []) }  </description>
+      <guid>https://deeptree.me/post/2018/06/passive/</guid>
+      <description>起因  在移动端使用event.preventDefault()来阻止touchstart和touchmove事件发现无法实现
+ 打开Chrome控制台发现打印了如下文字
+[Intervention] Unable to preventDefault inside passive event listener due to target being treated as passive. See https://www.chromestatus.com/features/5093566007214080  点进网页看看发生了什么！
+ AddEventListenerOptions defaults passive to false. With this change touchstart and touchmove listeners added to the document will default to passive:true (so that calls to preventDefault will be ignored)..
+If the value is explicitly provided in the AddEventListenerOptions it will continue having the value specified by the page.</description>
     </item>
     
   </channel>

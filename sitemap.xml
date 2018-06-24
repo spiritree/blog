@@ -3,34 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://spiritree.github.io/post/javascript-inherit/</loc>
-    <lastmod>2018-05-12T23:02:57+08:00</lastmod>
+    <loc>https://deeptree.me/post/2018/06/passive/</loc>
+    <lastmod>2018-06-23T22:42:31+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://spiritree.github.io/post/helloworld/</loc>
-    <lastmod>2018-05-12T22:39:49+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://spiritree.github.io/categories/</loc>
+    <loc>https://deeptree.me/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://spiritree.github.io/post/</loc>
-    <lastmod>2018-05-12T23:02:57+08:00</lastmod>
+    <loc>https://deeptree.me/categories/javascript/</loc>
+    <lastmod>2018-06-23T22:42:31+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://spiritree.github.io/</loc>
-    <lastmod>2018-05-12T23:02:57+08:00</lastmod>
+    <loc>https://deeptree.me/post/</loc>
+    <lastmod>2018-06-23T22:42:31+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://spiritree.github.io/tags/</loc>
+    <loc>https://deeptree.me/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://deeptree.me/tags/%E4%BA%8B%E4%BB%B6/</loc>
+    <lastmod>2018-06-23T22:42:31+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://deeptree.me/</loc>
+    <lastmod>2018-06-23T22:42:31+08:00</lastmod>
     <priority>0</priority>
   </url>
   
