@@ -6,10 +6,26 @@
     <description>Recent content in Javascript on 深樹博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 23 Jun 2018 22:42:31 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 17 Jul 2018 17:47:01 +0800</lastBuildDate>
     
 	<atom:link href="https://deeptree.me/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>一键上传canvas所生成的图片至CDN</title>
+      <link>https://deeptree.me/post/2018/07/uploadcanvasimg/</link>
+      <pubDate>Tue, 17 Jul 2018 17:47:01 +0800</pubDate>
+      
+      <guid>https://deeptree.me/post/2018/07/uploadcanvasimg/</guid>
+      <description>起因 最近在做动态生成海报的项目，有生成海报后上传当前canvas图片的需求。
+分析 脑袋一拍，思索出流程是这样canvas=&amp;gt;base64=&amp;gt;POST接口。但是常见的CDN不支持base64啊！查了下发现有canvas.toBlob（兼容性为Chrome50+）
+于是流程改为canvas=&amp;gt;blob=&amp;gt;POST接口，但发现CDN还是不吃这一套，接口报错
+思来想去，决定用普通的手动上传方式&amp;lt;input type=&amp;quot;file&amp;quot; /&amp;gt;看下请求格式（如图）
+从Content-Type可以看出需要使用FormData对象去上传
+红框部分则是&amp;lt;input type=&amp;quot;file&amp;quot; /&amp;gt;所生成的
+分析一通后，梳理流程为canvas=&amp;gt;blob=&amp;gt;File=&amp;gt;FormData=&amp;gt;POST
+代码 canvasInstance.toBlob(blob =&amp;gt; { // blob转file const file = new File([blob], &#39;poster.png&#39;, { type: &#39;image/png&#39;, lastModified: Date.now() }) const xhr = new XMLHttpRequest() xhr.onreadystatechange = () =&amp;gt; { try { if (xhr.readyState === 4 &amp;amp;&amp;amp; xhr.status &amp;gt;= 200 &amp;amp;&amp;amp; xhr.status &amp;lt; 400) { const res = JSON.parse(xhr.responseText) console.log(res) } } catch (e) { console.log(&#39;e&#39;, e) } } xhr.</description>
+    </item>
     
     <item>
       <title>addEventListener中的passive属性踩坑</title>

@@ -6,9 +6,19 @@
     <description>Recent content in Tags on 深樹博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Tue, 17 Jul 2018 17:47:01 +0800</lastBuildDate>
     
 	<atom:link href="https://deeptree.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Canvas</title>
+      <link>https://deeptree.me/tags/canvas/</link>
+      <pubDate>Tue, 17 Jul 2018 17:47:01 +0800</pubDate>
+      
+      <guid>https://deeptree.me/tags/canvas/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>事件</title>
