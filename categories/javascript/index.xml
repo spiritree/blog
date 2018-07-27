@@ -24,7 +24,7 @@
 从Content-Type可以看出需要使用FormData对象去上传
 红框部分则是&amp;lt;input type=&amp;quot;file&amp;quot; /&amp;gt;所生成的
 分析一通后，梳理流程为canvas=&amp;gt;blob=&amp;gt;File=&amp;gt;FormData=&amp;gt;POST
-代码 canvasInstance.toBlob(blob =&amp;gt; { // blob转file const file = new File([blob], &#39;poster.png&#39;, { type: &#39;image/png&#39;, lastModified: Date.now() }) const xhr = new XMLHttpRequest() xhr.onreadystatechange = () =&amp;gt; { try { if (xhr.readyState === 4 &amp;amp;&amp;amp; xhr.status &amp;gt;= 200 &amp;amp;&amp;amp; xhr.status &amp;lt; 400) { const res = JSON.parse(xhr.responseText) console.log(res) } } catch (e) { console.log(&#39;e&#39;, e) } } xhr.</description>
+代码 upload = () =&amp;gt; { return new Promise((resolve, reject) =&amp;gt; { canvasInstance.toBlob(blob =&amp;gt; { // blob转file const file = new File([blob], &#39;poster.png&#39;, { type: &#39;image/png&#39;, lastModified: Date.now() }) const xhr = new XMLHttpRequest() xhr.onreadystatechange = () =&amp;gt; { try { if (xhr.readyState === 4 &amp;amp;&amp;amp; xhr.status &amp;gt;= 200 &amp;amp;&amp;amp; xhr.status &amp;lt; 400) { const res = JSON.</description>
     </item>
     
     <item>

@@ -51,7 +51,7 @@
                     </h1>
                     <h2 class="headline">
                     Jul 17, 2018 17:47
-                    · 87 words
+                    · 99 words
                     · 1 minute read
                       <span class="tags">
                       
@@ -105,33 +105,37 @@
 
 <h2 id="代码">代码</h2>
 
-<pre><code class="language-javascript">canvasInstance.toBlob(blob =&gt; {
-  // blob转file
-  const file = new File([blob], 'poster.png', {
-    type: 'image/png',
-    lastModified: Date.now()
-  })
-  const xhr = new XMLHttpRequest()
-  xhr.onreadystatechange = () =&gt; {
-    try {
-      if (xhr.readyState === 4 &amp;&amp; xhr.status &gt;= 200 &amp;&amp; xhr.status &lt; 400) {
-        const res = JSON.parse(xhr.responseText)
-        console.log(res)
+<pre><code class="language-javascript">upload = () =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    canvasInstance.toBlob(blob =&gt; {
+      // blob转file
+      const file = new File([blob], 'poster.png', {
+        type: 'image/png',
+        lastModified: Date.now()
+      })
+      const xhr = new XMLHttpRequest()
+      xhr.onreadystatechange = () =&gt; {
+        try {
+          if (xhr.readyState === 4 &amp;&amp; xhr.status &gt;= 200 &amp;&amp; xhr.status &lt; 400) {
+            const res = JSON.parse(xhr.responseText)
+            resolve(res)
+          }
+        } catch {
+          reject(new Error(xhr.statusText))
+        }
       }
-    } catch (e) {
-      console.log('e', e)
-    }
-  }
-  xhr.open(
-    'POST',
-    `${cdnUrl}`,
-    true
-  )
-  // 转换成通过input上传的文件
-  let formData = new FormData()
-  formData.append('file', file)
-  xhr.send(formData)
-}, 'image/png')
+      xhr.open(
+        'POST',
+        `${cdnUrl}`,
+        true
+      )
+      // 转换成通过input上传的文件
+      let formData = new FormData()
+      formData.append('file', file)
+      xhr.send(formData)
+    }, 'image/png')
+  })
+}
 </code></pre>
 
                 </section>
