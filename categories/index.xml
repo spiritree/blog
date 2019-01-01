@@ -6,9 +6,19 @@
     <description>Recent content in Categories on 深樹博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Mon, 31 Dec 2018 21:53:55 +0800</lastBuildDate>
     
 	<atom:link href="https://deeptree.me/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2018</title>
+      <link>https://deeptree.me/categories/2018/</link>
+      <pubDate>Mon, 31 Dec 2018 21:53:55 +0800</pubDate>
+      
+      <guid>https://deeptree.me/categories/2018/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Html</title>
