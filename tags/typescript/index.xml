@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Typescript on 深樹博客</title>
+    <link>https://deeptree.me/tags/typescript/</link>
+    <description>Recent content in Typescript on 深樹博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 13 Mar 2019 11:22:55 +0800</lastBuildDate>
+    
+	<atom:link href="https://deeptree.me/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why and How TypeScript?</title>
+      <link>https://deeptree.me/post/2019/03/tsstart/</link>
+      <pubDate>Wed, 13 Mar 2019 11:22:55 +0800</pubDate>
+      
+      <guid>https://deeptree.me/post/2019/03/tsstart/</guid>
+      <description>Why TypeScript? 业界动态 Facebook的yarn宣布用TypeScript重写 https://github.com/yarnpkg/yarn/issues/6953
+Facebook的Jest宣布用TypeScript重写 https://github.com/facebook/jest/pull/7554
+storybook正在用TypeScript重构中 Vue3也在用TypeScript重构中 Github Trending 
+
+Top 10 JavaScript errors from 1000+ projects (Rollbar) - Uncaught TypeError: Cannot read property，常见于a.b - TypeError: ‘undefined’ is not a function，常见于a.b() - TypeError: Cannot read property ‘length’，期望是数组 - ‘X’ is not defined，ReferenceError - num.toFixed(102)，RangeError
+That&amp;rsquo;s Why TypeScript  提升代码的可读性与可维护性  编译时报错 配合VSCode的类型推导提升开发体验 类型是最好的文档，加上注释后可以一定程度上替代文档 自动生成index.d.ts（类型定义文件）  社区活跃且是JavaScript名义上的唯一进化方向  语法广受好评（师承C#） 大部分热门库/框架都有类型定义  与JavaScript兼容性良好  JavaScript的超集，.ts和.js可以共存   基础类型 // 字符串 const str: string = &#39;a&#39; // 布尔值 const isCC: boolean = true // 数值 const LIMIT: number = 10 // 空 function consoleStr(): void { console.</description>
+    </item>
+    
+  </channel>
+</rss>

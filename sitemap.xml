@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://deeptree.me/post/2019/03/tsstart/</loc>
+    <lastmod>2019-03-13T11:22:55+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://deeptree.me/post/2018/12/2018/</loc>
     <lastmod>2018-12-31T21:53:55+08:00</lastmod>
   </url>
@@ -55,13 +60,25 @@
   
   <url>
     <loc>https://deeptree.me/post/</loc>
-    <lastmod>2018-12-31T21:53:55+08:00</lastmod>
+    <lastmod>2019-03-13T11:22:55+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://deeptree.me/tags/</loc>
     <lastmod>2018-12-31T21:53:55+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://deeptree.me/tags/typescript/</loc>
+    <lastmod>2019-03-13T11:22:55+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://deeptree.me/categories/typescript/</loc>
+    <lastmod>2019-03-13T11:22:55+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -73,7 +90,7 @@
   
   <url>
     <loc>https://deeptree.me/</loc>
-    <lastmod>2018-12-31T21:53:55+08:00</lastmod>
+    <lastmod>2019-03-13T11:22:55+08:00</lastmod>
     <priority>0</priority>
   </url>
   
