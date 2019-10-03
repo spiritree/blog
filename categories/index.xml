@@ -6,10 +6,28 @@
     <description>Recent content in Categories on 深樹博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 31 Dec 2018 21:53:55 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 22:45:35 +0800</lastBuildDate>
     
 	<atom:link href="https://deeptree.me/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>macOS</title>
+      <link>https://deeptree.me/categories/macos/</link>
+      <pubDate>Thu, 03 Oct 2019 22:45:35 +0800</pubDate>
+      
+      <guid>https://deeptree.me/categories/macos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TypeScript</title>
+      <link>https://deeptree.me/categories/typescript/</link>
+      <pubDate>Wed, 13 Mar 2019 11:22:55 +0800</pubDate>
+      
+      <guid>https://deeptree.me/categories/typescript/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>2018</title>
@@ -21,7 +39,7 @@
     </item>
     
     <item>
-      <title>Html</title>
+      <title>HTML</title>
       <link>https://deeptree.me/categories/html/</link>
       <pubDate>Tue, 17 Jul 2018 17:47:01 +0800</pubDate>
       
@@ -30,20 +48,11 @@
     </item>
     
     <item>
-      <title>Javascript</title>
+      <title>JavaScript</title>
       <link>https://deeptree.me/categories/javascript/</link>
       <pubDate>Tue, 17 Jul 2018 17:47:01 +0800</pubDate>
       
       <guid>https://deeptree.me/categories/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Typescript</title>
-      <link>https://deeptree.me/categories/typescript/</link>
-      <pubDate>Wed, 13 Mar 2019 11:22:55 +0800</pubDate>
-      
-      <guid>https://deeptree.me/categories/typescript/</guid>
       <description></description>
     </item>
     
