@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 深樹博客</title>
@@ -6,10 +6,26 @@
     <description>Recent content in Posts on 深樹博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 03 Oct 2019 22:45:35 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jan 2020 21:49:50 +0800</lastBuildDate>
     
 	<atom:link href="https://deeptree.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>深入原理：Babel原理与Babel插件实践</title>
+      <link>https://deeptree.me/post/2020/01/babel-plugin/</link>
+      <pubDate>Tue, 28 Jan 2020 21:49:50 +0800</pubDate>
+      
+      <guid>https://deeptree.me/post/2020/01/babel-plugin/</guid>
+      <description>前言 前端开发从「刀耕火种」过渡到「现代化」自动构建工程体系的过程中，Babel扮演了一个举足轻重的地位，使得我们可以用与时俱进的代码语法且最大程度上不受浏览器版本的约束，本文对如何使用Babel不再赘述，着重介绍Babel的原理和如何实现Babel插件。
+什么是Babel？ Babel是JavaScript的编译器，它可以将你ES6(ES2015)+语法的代码编译到ES5版本从而兼容落后的浏览器。Babel也设计了一套插件架构去做代码转换，所以你可以去设计独创的代码转换规则。
+在编写Babel插件之前，大家需要了解一下抽象语法树/AST的知识（熟知编译原理的可以快速跳过）。
+抽象语法树（AST） 抽象语法树是高级编程语言（Java、JavaScript等）转换成机器语言的桥梁。解析器会根据ECMAScript 标准「JavaScript语言规范」来对代码字符串进行词法分析，拆分成一个个词法单元，再遍历各个词法单元进行语法分析构造出AST。我们通过如下代码来分析原理：
+let str = &amp;#39;test&amp;#39;; str + &amp;#39;abc&amp;#39;; 词法分析（Lexical Analysis） 对代码解析时先进入词法分析阶段，tokenizer(分词器)会将原始代码按照特定字符(如let、var、=等保留字)分成一个个叫token的东西。token由分号、标签、变量、字符串等组成，tokenizer将tokens构造成如下数据结构。
+这是一个JavaScript简易编译器中词法分析的实现：https://github.com/jamiebuilds/the-super-tiny-compiler/blob/master/the-super-tiny-compiler.js#L381
+在线词法分析链接
+[ { &amp;#34;type&amp;#34;: &amp;#34;Keyword&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;let&amp;#34; }, { &amp;#34;type&amp;#34;: &amp;#34;Identifier&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;str&amp;#34; }, { &amp;#34;type&amp;#34;: &amp;#34;Punctuator&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;=&amp;#34; }, { &amp;#34;type&amp;#34;: &amp;#34;String&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;&amp;#39;test&amp;#39;&amp;#34; }, { &amp;#34;type&amp;#34;: &amp;#34;Punctuator&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;;&amp;#34; }, { &amp;#34;type&amp;#34;: &amp;#34;Identifier&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;str&amp;#34; }, { &amp;#34;type&amp;#34;: &amp;#34;Punctuator&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;+&amp;#34; }, { &amp;#34;type&amp;#34;: &amp;#34;String&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;&amp;#39;abc&amp;#39;&amp;#34; }, { &amp;#34;type&amp;#34;: &amp;#34;Punctuator&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;;&amp;#34; } ] 语法分析（Syntactic Analysis） 词法分析完毕后进入语法分析阶段，语法分析将tokens重新格式化为描述语法各部分及其相互关系的表示形式，这就是抽象语法树。</description>
+    </item>
     
     <item>
       <title>我的电脑装了什么（2019版）</title>
@@ -17,7 +33,7 @@
       <pubDate>Thu, 03 Oct 2019 22:45:35 +0800</pubDate>
       
       <guid>https://deeptree.me/post/2019/10/macinstall/</guid>
-      <description> Mac软件 互联网  ShadowsocksX-R clashX 下一代工具，配合v2ray  开发  VSCode 字体为Fira Code brew 安装利器，类似于apt-get 终端 iTerm2 + oh my zsh-&amp;gt;Prezto 本人暂时还是用zsh  spaceship-prompt 显示更多辅助信息 主题：ys zsh-autosuggestions zsh-syntax-highlighting autojump   开发辅助  Postman API请求 Charles 抓包，安卓考虑httpcanary Gas Mask Hosts 管理  输入  Reeder RSS 阅读软件 Feedly RSS 阅读网站 RSSHub 寻找RSS源  输出  有道云笔记 对于安卓用户来说真的是最好的了 LICEcap GIF录屏工具 Microsoft Whiteboard  效率  Alfred  workflows  [CheatSheet]() 显示当前app的快捷键 HyperSwitch Tab键增强 Magnet 分屏  命令行 brew  autojump 目录跳转 bat 带行号的 cat，可以配 alias cat=&amp;quot;bat&amp;quot; fd 高级find  node  fkill 进程，端口kill  工具  Keka 压缩工具 FileZilla FTP客户端 CleanMyMac 系统清理 AppCleaner 卸载App，干净 IINA 视频播放 Motrix 下载工具 Parallels Desktop 虚拟机 iStat Menus 系统监控  </description>
+      <description>Mac软件 互联网  ShadowsocksX-R clashX 下一代工具，配合v2ray  开发  VSCode 字体为Fira Code brew 安装利器，类似于apt-get 终端 iTerm2 + oh my zsh-&amp;gt;Prezto 本人暂时还是用zsh  spaceship-prompt 显示更多辅助信息 主题：ys zsh-autosuggestions zsh-syntax-highlighting autojump    开发辅助  Postman API请求 Charles 抓包，安卓考虑httpcanary Gas Mask Hosts 管理  输入  Reeder RSS 阅读软件 Feedly RSS 阅读网站 RSSHub 寻找RSS源  输出  有道云笔记 对于安卓用户来说真的是最好的了 LICEcap GIF录屏工具 Microsoft Whiteboard  效率  Alfred  workflows   CheatSheet 显示当前app的快捷键 HyperSwitch Tab键增强 Magnet 分屏  命令行 brew  autojump 目录跳转 bat 带行号的 cat，可以配 alias cat=&amp;quot;bat&amp;quot; fd 高级find  node  fkill 进程，端口kill  工具  Keka 压缩工具 FileZilla FTP客户端 CleanMyMac 系统清理 AppCleaner 卸载App，干净 IINA 视频播放 Motrix 下载工具 Parallels Desktop 虚拟机 iStat Menus 系统监控  </description>
     </item>
     
     <item>
@@ -28,10 +44,9 @@
       <guid>https://deeptree.me/post/2019/03/tsstart/</guid>
       <description>Why TypeScript? 业界动态 Facebook的yarn宣布用TypeScript重写 https://github.com/yarnpkg/yarn/issues/6953
 Facebook的Jest宣布用TypeScript重写 https://github.com/facebook/jest/pull/7554
-storybook正在用TypeScript重构中 Vue3也在用TypeScript重构中 Github Trending 
-
-Top 10 JavaScript errors from 1000+ projects (Rollbar) - Uncaught TypeError: Cannot read property，常见于a.b - TypeError: ‘undefined’ is not a function，常见于a.b() - TypeError: Cannot read property ‘length’，期望是数组 - ‘X’ is not defined，ReferenceError - num.toFixed(102)，RangeError
-That&amp;rsquo;s Why TypeScript  提升代码的可读性与可维护性  编译时报错 配合VSCode的类型推导提升开发体验 类型是最好的文档，加上注释后可以一定程度上替代文档 自动生成index.d.ts（类型定义文件）  社区活跃且是JavaScript名义上的唯一进化方向  语法广受好评（师承C#） 大部分热门库/框架都有类型定义  与JavaScript兼容性良好  JavaScript的超集，.ts和.js可以共存   基础类型 // 字符串 const str: string = &#39;a&#39; // 布尔值 const isCC: boolean = true // 数值 const LIMIT: number = 10 // 空 function consoleStr(): void { console.</description>
+storybook正在用TypeScript重构中 Vue3也在用TypeScript重构中  Github Trending 
+ 
+ Top 10 JavaScript errors from 1000+ projects (Rollbar)  Uncaught TypeError: Cannot read property，常见于a.b TypeError: ‘undefined’ is not a function，常见于a.b() TypeError: Cannot read property ‘length’，期望是数组 ‘X’ is not defined，ReferenceError num.toFixed(102)，RangeError     That&amp;rsquo;s Why TypeScript  提升代码的可读性与可维护性  编译时报错 配合VSCode的类型推导提升开发体验 类型是最好的文档，加上注释后可以一定程度上替代文档 自动生成index.d.ts（类型定义文件）   社区活跃且是JavaScript名义上的唯一进化方向  语法广受好评（师承C#） 大部分热门库/框架都有类型定义   与JavaScript兼容性良好  JavaScript的超集，.</description>
     </item>
     
     <item>
@@ -40,7 +55,7 @@ That&amp;rsquo;s Why TypeScript  提升代码的可读性与可维护性  编译
       <pubDate>Mon, 31 Dec 2018 21:53:55 +0800</pubDate>
       
       <guid>https://deeptree.me/post/2018/12/2018/</guid>
-      <description> 迷茫与低迷 去年以「软件开发工程师」的身份进入上一家公司开始实习。在此期间，我大部分时间都在做后台管理系统，公司里的小伙伴人均「全栈」， 我自然也是学习Spring Boot全家桶（Java）+Vue全家桶（JavaScript），期间也完成了人生中第一个技术分享（关于webpack）。同时也很感谢陆老师和华哥，学到了各种经验。 但越学越迷茫，因为我做日常小需求没啥问题，可日后出去面试是前端还是后端呢？
+      <description>迷茫与低迷 去年以「软件开发工程师」的身份进入上一家公司开始实习。在此期间，我大部分时间都在做后台管理系统，公司里的小伙伴人均「全栈」， 我自然也是学习Spring Boot全家桶（Java）+Vue全家桶（JavaScript），期间也完成了人生中第一个技术分享（关于webpack）。同时也很感谢陆老师和华哥，学到了各种经验。 但越学越迷茫，因为我做日常小需求没啥问题，可日后出去面试是前端还是后端呢？
 随后在v2ex上征询了下前辈们的意见，最后还是决定向着自己更喜欢的前端方向走。年后找工作的经历跌宕起伏，但结果是好的。
 重新开始 今年年中以「前端开发工程师」的身份进入现在的公司。从CSS弱鸡成长到常规布局和动画都能应付了；从Vue全家桶也转到React全家桶。 也接触了组件库开发、webpack优化、babel升级和node端的开发，这符合我心中大前端的概念。 虽然比较辛苦，但是也感觉到自己在快速成长中，感谢整个前端组的伙伴们，帮助了我许多。
 展望  尽可能在开源社区做出贡献 深入基本原理 分享 健身?女朋友?  </description>
@@ -59,7 +74,7 @@ That&amp;rsquo;s Why TypeScript  提升代码的可读性与可维护性  编译
 从Content-Type可以看出需要使用FormData对象去上传
 红框部分则是&amp;lt;input type=&amp;quot;file&amp;quot; /&amp;gt;所生成的
 分析一通后，梳理流程为canvas=&amp;gt;blob=&amp;gt;File=&amp;gt;FormData=&amp;gt;POST
-代码 upload = () =&amp;gt; { return new Promise((resolve, reject) =&amp;gt; { canvasInstance.toBlob(blob =&amp;gt; { // blob转file const file = new File([blob], &#39;poster.png&#39;, { type: &#39;image/png&#39;, lastModified: Date.now() }) const xhr = new XMLHttpRequest() xhr.onreadystatechange = () =&amp;gt; { try { if (xhr.readyState === 4 &amp;amp;&amp;amp; xhr.status &amp;gt;= 200 &amp;amp;&amp;amp; xhr.status &amp;lt; 400) { const res = JSON.</description>
+代码 upload = () =&amp;gt; { return new Promise((resolve, reject) =&amp;gt; { canvasInstance.toBlob(blob =&amp;gt; { // blob转file  const file = new File([blob], &amp;#39;poster.png&amp;#39;, { type: &amp;#39;image/png&amp;#39;, lastModified: Date.now() }) const xhr = new XMLHttpRequest() xhr.onreadystatechange = () =&amp;gt; { try { if (xhr.readyState === 4 &amp;amp;&amp;amp; xhr.status &amp;gt;= 200 &amp;amp;&amp;amp; xhr.status &amp;lt; 400) { const res = JSON.</description>
     </item>
     
     <item>
@@ -70,9 +85,9 @@ That&amp;rsquo;s Why TypeScript  提升代码的可读性与可维护性  编译
       <guid>https://deeptree.me/post/2018/06/passive/</guid>
       <description>起因  在移动端使用event.preventDefault()来阻止touchstart和touchmove事件发现无法实现
  打开Chrome控制台发现打印了如下文字
-[Intervention] Unable to preventDefault inside passive event listener due to target being treated as passive. See https://www.chromestatus.com/features/5093566007214080  点进网页看看发生了什么！
+[Intervention] Unable to preventDefault inside passive event listener due to target being treated as passive. See https://www.chromestatus.com/features/5093566007214080 点进网页看看发生了什么！
  AddEventListenerOptions defaults passive to false. With this change touchstart and touchmove listeners added to the document will default to passive:true (so that calls to preventDefault will be ignored)..
-If the value is explicitly provided in the AddEventListenerOptions it will continue having the value specified by the page.</description>
+  If the value is explicitly provided in the AddEventListenerOptions it will continue having the value specified by the page.</description>
     </item>
     
   </channel>

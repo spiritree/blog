@@ -66,121 +66,83 @@
                   
                     <div id="toc">
                       <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#起因">起因</a></li>
-<li><a href="#为什么chrome这样做">为什么Chrome这样做？</a></li>
-<li><a href="#解决方法">解决方法</a>
-<ul>
-<li><a href="#设置touch-action">设置touch-action?</a></li>
-<li><a href="#addeventlistener中设置passive">addEventListener中设置passive</a></li>
-</ul></li>
-<li><a href="#参考文章">参考文章</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#起因">起因</a></li>
+    <li><a href="#为什么chrome这样做">为什么Chrome这样做？</a></li>
+    <li><a href="#解决方法">解决方法</a>
+      <ul>
+        <li><a href="#设置touch-action">设置touch-action?</a></li>
+        <li><a href="#addeventlistener中设置passive">addEventListener中设置passive</a></li>
+      </ul>
+    </li>
+    <li><a href="#参考文章">参考文章</a></li>
+  </ul>
 </nav>
                     </div>
                   
                 
                 <section id="post-body">
-                    
-
-<h2 id="起因">起因</h2>
-
+                    <h2 id="起因">起因</h2>
 <blockquote>
 <p>在移动端使用<code>event.preventDefault()</code>来阻止<code>touchstart</code>和<code>touchmove</code>事件发现无法实现</p>
 </blockquote>
-
 <p>打开Chrome控制台发现打印了如下文字</p>
-
-<pre><code class="language-bash">[Intervention] Unable to preventDefault inside passive event listener due to target being treated as passive. See https://www.chromestatus.com/features/5093566007214080
-</code></pre>
-
-<p>点进网页看看发生了什么！</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>Intervention<span style="color:#f92672">]</span> Unable to preventDefault inside passive event listener due to target being treated as passive. See https://www.chromestatus.com/features/5093566007214080
+</code></pre></div><p>点进网页看看发生了什么！</p>
 <blockquote>
 <p>AddEventListenerOptions defaults passive to false. With this change touchstart and touchmove listeners added to the document will default to passive:true (so that calls to preventDefault will be ignored)..</p>
-
+</blockquote>
+<blockquote>
 <p>If the value is explicitly provided in the AddEventListenerOptions it will continue having the value specified by the page.</p>
-
+</blockquote>
+<blockquote>
 <p>This is behind a flag starting in Chrome 54, and enabled by default in Chrome 56. See <a href="https://developers.google.com/web/updates/2017/01/scrolling-intervention">https://developers.google.com/web/updates/2017/01/scrolling-intervention</a></p>
 </blockquote>
-
 <p>大意是：为了移动端性能考虑，在监听<code>touchstart</code>和<code>touchmove</code>时，默认设置<code>addEventListener</code>中的<code>passive</code>为<code>true</code>（这样就导致了<code>preventDefault</code>失效）</p>
-
 <h2 id="为什么chrome这样做">为什么Chrome这样做？</h2>
-
 <blockquote>
 <p><a href="https://developers.google.com/web/updates/2017/01/scrolling-intervention">https://developers.google.com/web/updates/2017/01/scrolling-intervention</a></p>
 </blockquote>
-
 <p><strong>Performance!</strong>
 可以减少250ms左右的延迟</p>
-
 <p>Passive event listeners是2016年Google I/O 上同 PWA 概念一起被提出，但是同PWA不同，Passive event listeners
 的作用很简单，如果用简单一句话来解释就是：提升页面滑动的流畅度。</p>
-
 <p>Chrome 51 和 Firefox 49 已经支持 passive 属性。如果浏览器不支持，已经有人做了非常巧妙地 polyfill</p>
-
-<pre><code class="language-javascript">// Test via a getter in the options object to see 
-// if the passive property is accessed
-var supportsPassive = false;
-try {
-  var opts = Object.defineProperty({}, 'passive', {
-    get: function() {
-      supportsPassive = true;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// Test via a getter in the options object to see 
+</span><span style="color:#75715e"></span><span style="color:#75715e">// if the passive property is accessed
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">supportsPassive</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+<span style="color:#66d9ef">try</span> {
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">opts</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">defineProperty</span>({}, <span style="color:#e6db74">&#39;passive&#39;</span>, {
+    <span style="color:#a6e22e">get</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+      <span style="color:#a6e22e">supportsPassive</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
     }
   });
-  window.addEventListener(&quot;test&quot;, null, opts);
-} catch (e) {}
+  window.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;test&#34;</span>, <span style="color:#66d9ef">null</span>, <span style="color:#a6e22e">opts</span>);
+} <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {}
 
-// Use our detect's results. 
-// passive applied if supported, capture will be false either way.
-elem.addEventListener(
-  'touchstart',
-  fn,
-  supportsPassive ? { passive: true } : false
+<span style="color:#75715e">// Use our detect&#39;s results. 
+</span><span style="color:#75715e"></span><span style="color:#75715e">// passive applied if supported, capture will be false either way.
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">elem</span>.<span style="color:#a6e22e">addEventListener</span>(
+  <span style="color:#e6db74">&#39;touchstart&#39;</span>,
+  <span style="color:#a6e22e">fn</span>,
+  <span style="color:#a6e22e">supportsPassive</span> <span style="color:#f92672">?</span> { <span style="color:#a6e22e">passive</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> } <span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
 ); 
-</code></pre>
-
-<p>在Vue中你可以通过如下代码来提升移动端性能够</p>
-
-<pre><code class="language-html">&lt;div v-on:scroll.passive=&quot;onScroll&quot;&gt;...&lt;/div&gt;
-</code></pre>
-
-<p>在React和其他框架/非框架中只能手动绑定了</p>
-
-<pre><code class="language-javascript">elem.addEventListener('touchmove', func, { passive: true })
-</code></pre>
-
-<p>记得用完解绑！</p>
-
-<pre><code class="language-javascript">elem.removeEventListener('touchmove', func, false)
-</code></pre>
-
-<h2 id="解决方法">解决方法</h2>
-
+</code></pre></div><p>在Vue中你可以通过如下代码来提升移动端性能够</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">v-on:scroll</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">passive</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;onScroll&#34;</span>&gt;...&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>在React和其他框架/非框架中只能手动绑定了</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">elem</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;touchmove&#39;</span>, <span style="color:#a6e22e">func</span>, { <span style="color:#a6e22e">passive</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> })
+</code></pre></div><p>记得用完解绑！</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">elem</span>.<span style="color:#a6e22e">removeEventListener</span>(<span style="color:#e6db74">&#39;touchmove&#39;</span>, <span style="color:#a6e22e">func</span>, <span style="color:#66d9ef">false</span>)
+</code></pre></div><h2 id="解决方法">解决方法</h2>
 <h3 id="设置touch-action">设置touch-action?</h3>
-
 <p>在网上搜了很多方法，有不少答案都指向设置<code>touch-action: none</code></p>
-
 <p>虽然设置后的确Chrome的确不报提示了，但是<code>preventDefault</code>依然没有生效</p>
-
 <h3 id="addeventlistener中设置passive">addEventListener中设置passive</h3>
-
 <p>只能自己手动来绑定事件了</p>
-
-<pre><code class="language-javascript">elem.addEventListener('touchmove', func, { passive: false })
-</code></pre>
-
-<p>同样，用完要记得解绑~</p>
-
-<pre><code class="language-javascript">elem.removeEventListener('touchmove', func, false)
-</code></pre>
-
-<h2 id="参考文章">参考文章</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">elem</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;touchmove&#39;</span>, <span style="color:#a6e22e">func</span>, { <span style="color:#a6e22e">passive</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span> })
+</code></pre></div><p>同样，用完要记得解绑~</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">elem</span>.<span style="color:#a6e22e">removeEventListener</span>(<span style="color:#e6db74">&#39;touchmove&#39;</span>, <span style="color:#a6e22e">func</span>, <span style="color:#66d9ef">false</span>)
+</code></pre></div><h2 id="参考文章">参考文章</h2>
 <p><a href="https://segmentfault.com/a/1190000007913386">https://segmentfault.com/a/1190000007913386</a></p>
 
                 </section>
@@ -197,6 +159,10 @@ elem.addEventListener(
 
     
     
+    
+        <li>
+            <a href="/post/2020/01/babel-plugin/">深入原理：Babel原理与Babel插件实践<aside class="dates">Jan 28 2020</aside></a>
+        </li>
     
         <li>
             <a href="/post/2019/10/macinstall/">我的电脑装了什么（2019版）<aside class="dates">Oct 3 2019</aside></a>
@@ -235,13 +201,14 @@ elem.addEventListener(
   })
   gitalk.render('gitalk-ctn')
 </script>
+
             
             
             <footer id="footer">
     
     <p class="small">
     
-       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i> 
+       © Copyright 2020 <i class="fa fa-heart" aria-hidden="true"></i> 
     
     </p>
     <p class="small">

@@ -49,7 +49,7 @@
                     </h1>
                     <h2 class="headline">
                     Mar 13, 2019 11:22
-                    · 213 words
+                    · 208 words
                     · 1 minute read
                       <span class="tags">
                       
@@ -66,236 +66,165 @@
                   
                     <div id="toc">
                       <nav id="TableOfContents">
-<ul>
-<li><a href="#why-typescript">Why TypeScript?</a>
-<ul>
-<li><a href="#业界动态">业界动态</a>
-<ul>
-<li><a href="#facebook的yarn宣布用typescript重写">Facebook的yarn宣布用TypeScript重写</a></li>
-<li><a href="#facebook的jest宣布用typescript重写">Facebook的Jest宣布用TypeScript重写</a></li>
-<li><a href="#storybook正在用typescript重构中">storybook正在用TypeScript重构中</a></li>
-<li><a href="#vue3也在用typescript重构中">Vue3也在用TypeScript重构中</a></li>
-</ul></li>
-<li><a href="#github-trending">Github Trending</a>
-<ul>
-<li><a href="#top-10-javascript-errors-from-1000-projects-rollbar">Top 10 JavaScript errors from 1000+ projects (Rollbar)</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#that-s-why-typescript">That&rsquo;s Why TypeScript</a></li>
-<li><a href="#基础类型">基础类型</a></li>
-<li><a href="#数组">数组</a></li>
-<li><a href="#函数">函数</a></li>
-<li><a href="#接口-interface">接口（Interface）</a></li>
-<li><a href="#类-class">类（Class）</a></li>
-<li><a href="#泛型-generics">泛型（Generics）</a></li>
-<li><a href="#how-typescript">How TypeScript?</a>
-<ul>
-<li><a href="#frontend">FrontEnd</a></li>
-<li><a href="#node-js">Node.js</a></li>
-<li><a href="#lint">Lint</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#业界动态">业界动态</a>
+      <ul>
+        <li><a href="#facebook的yarn宣布用typescript重写">Facebook的yarn宣布用TypeScript重写</a></li>
+        <li><a href="#facebook的jest宣布用typescript重写">Facebook的Jest宣布用TypeScript重写</a></li>
+        <li><a href="#storybook正在用typescript重构中">storybook正在用TypeScript重构中</a></li>
+        <li><a href="#vue3也在用typescript重构中">Vue3也在用TypeScript重构中</a></li>
+      </ul>
+    </li>
+    <li><a href="#github-trending">Github Trending</a>
+      <ul>
+        <li><a href="#top-10-javascript-errors-from-1000-projects-rollbar">Top 10 JavaScript errors from 1000+ projects (Rollbar)</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#frontend">FrontEnd</a></li>
+    <li><a href="#nodejs">Node.js</a></li>
+    <li><a href="#lint">Lint</a></li>
+  </ul>
 </nav>
                     </div>
                   
                 
                 <section id="post-body">
-                    
-
-<!-- animate:fadeUp theme:dark align:center -->
-
+                    <!-- raw HTML omitted -->
 <h1 id="why-typescript">Why TypeScript?</h1>
-
 <h2 id="业界动态">业界动态</h2>
-
 <h3 id="facebook的yarn宣布用typescript重写">Facebook的yarn宣布用TypeScript重写</h3>
-
 <p><a href="https://github.com/yarnpkg/yarn/issues/6953">https://github.com/yarnpkg/yarn/issues/6953</a></p>
-
 <h3 id="facebook的jest宣布用typescript重写">Facebook的Jest宣布用TypeScript重写</h3>
-
 <p><a href="https://github.com/facebook/jest/pull/7554">https://github.com/facebook/jest/pull/7554</a></p>
-
 <h3 id="storybook正在用typescript重构中">storybook正在用TypeScript重构中</h3>
-
 <h3 id="vue3也在用typescript重构中">Vue3也在用TypeScript重构中</h3>
-
-<hr />
-
+<hr>
 <h2 id="github-trending">Github Trending</h2>
-
-<p><a href="https://i.loli.net/2019/02/24/5c72964fc2be3.png"><img src="https://i.loli.net/2019/02/24/5c72964fc2be3.png" alt="tsgithub.png" /></a></p>
-
-<hr />
-
-<p><a href="https://i.loli.net/2019/02/24/5c72964fbc4e6.png"><img src="https://i.loli.net/2019/02/24/5c72964fbc4e6.png" alt="tsgithub2.png" /></a></p>
-
-<hr />
-
+<p><a href="https://i.loli.net/2019/02/24/5c72964fc2be3.png"><img src="https://i.loli.net/2019/02/24/5c72964fc2be3.png" alt="tsgithub.png"></a></p>
+<hr>
+<p><a href="https://i.loli.net/2019/02/24/5c72964fbc4e6.png"><img src="https://i.loli.net/2019/02/24/5c72964fbc4e6.png" alt="tsgithub2.png"></a></p>
+<hr>
 <h3 id="top-10-javascript-errors-from-1000-projects-rollbar">Top 10 JavaScript errors from 1000+ projects (Rollbar)</h3>
-
-<p><img src="https://i.loli.net/2019/02/08/5c5d9119814ca.jpg" alt="1.jpg" />
-- Uncaught TypeError: Cannot read property，常见于a.b
-- TypeError: ‘undefined’ is not a function，常见于a.b()
-- TypeError: Cannot read property ‘length’，期望是数组
-- ‘X’ is not defined，ReferenceError
-- <code>num.toFixed(102)</code>，RangeError</p>
-
-<hr />
-
-<p><img src="https://i.loli.net/2019/02/17/5c69659a31f88.png" alt="3.png" /></p>
-
-<hr />
-
-<p><img src="https://i.loli.net/2019/02/17/5c696665f3371.jpg" alt="2.jpg" /></p>
-
-<hr />
-
-<h1 id="that-s-why-typescript">That&rsquo;s Why TypeScript</h1>
-
+<p><img src="https://i.loli.net/2019/02/08/5c5d9119814ca.jpg" alt="1.jpg"></p>
+<ul>
+<li>Uncaught TypeError: Cannot read property，常见于a.b</li>
+<li>TypeError: ‘undefined’ is not a function，常见于a.b()</li>
+<li>TypeError: Cannot read property ‘length’，期望是数组</li>
+<li>‘X’ is not defined，ReferenceError</li>
+<li><code>num.toFixed(102)</code>，RangeError</li>
+</ul>
+<hr>
+<p><img src="https://i.loli.net/2019/02/17/5c69659a31f88.png" alt="3.png"></p>
+<hr>
+<p><img src="https://i.loli.net/2019/02/17/5c696665f3371.jpg" alt="2.jpg"></p>
+<hr>
+<h1 id="thats-why-typescript">That&rsquo;s Why TypeScript</h1>
 <ul>
 <li>提升代码的可读性与可维护性
-
 <ul>
 <li>编译时报错</li>
 <li>配合VSCode的类型推导提升开发体验</li>
 <li>类型是最好的文档，加上注释后可以一定程度上替代文档</li>
 <li>自动生成index.d.ts（类型定义文件）</li>
-</ul></li>
+</ul>
+</li>
 <li>社区活跃且是JavaScript名义上的唯一进化方向
-
 <ul>
 <li>语法广受好评（师承C#）</li>
 <li>大部分热门库/框架都有类型定义</li>
-</ul></li>
+</ul>
+</li>
 <li>与JavaScript兼容性良好
-
 <ul>
 <li>JavaScript的超集，.ts和.js可以共存</li>
-</ul></li>
 </ul>
-
-<hr />
-
+</li>
+</ul>
+<hr>
 <h1 id="基础类型">基础类型</h1>
-
-<pre><code class="language-javascript">// 字符串
-const str: string = 'a'
-// 布尔值
-const isCC: boolean = true
-// 数值
-const LIMIT: number = 10
-// 空
-function consoleStr(): void {
-  console.log('abc')
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// 字符串
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a&#39;</span>
+<span style="color:#75715e">// 布尔值
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">isCC</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">boolean</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+<span style="color:#75715e">// 数值
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">LIMIT</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+<span style="color:#75715e">// 空
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">consoleStr</span>()<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;abc&#39;</span>)
 }
-// null and undefined
-const u: undefined = undefined
-const n: null = null
-</code></pre>
-
-<hr />
-
+<span style="color:#75715e">// null and undefined
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">u</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">undefined</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">undefined</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">n</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>
+</code></pre></div><hr>
 <h1 id="数组">数组</h1>
-
-<p><img src="https://i.loli.net/2019/02/17/5c69700398db7.png" alt="5.png" /></p>
-
-<hr />
-
+<p><img src="https://i.loli.net/2019/02/17/5c69700398db7.png" alt="5.png"></p>
+<hr>
 <h1 id="函数">函数</h1>
-
-<p><img src="https://i.loli.net/2019/02/18/5c6aaec23466f.png" alt="func.png" /></p>
-
-<hr />
-
-<h1 id="接口-interface">接口（Interface）</h1>
-
+<p><img src="https://i.loli.net/2019/02/18/5c6aaec23466f.png" alt="func.png"></p>
+<hr>
+<h1 id="接口interface">接口（Interface）</h1>
 <p>在⾯向对象语⾔中，接⼝（Interfaces）是⼀个很重要的概念，它是对⾏为的抽象，⽽具体如何⾏动需要由类 （classes）去实现（implements）。</p>
-
 <p>TypeScript 中的接⼝是⼀个⾮常灵活的概念，除了可⽤于 对类的⼀部分⾏为进⾏抽象以外，也常⽤于对「对象的形状（Shape）」进⾏描述。</p>
-
-<hr />
-
-<p><a href="https://i.loli.net/2019/02/25/5c73eb0276ee5.png"><img src="https://i.loli.net/2019/02/25/5c73eb0276ee5.png" alt="interface1.png" /></a></p>
-
-<hr />
-
-<h1 id="类-class">类（Class）</h1>
-
+<hr>
+<p><a href="https://i.loli.net/2019/02/25/5c73eb0276ee5.png"><img src="https://i.loli.net/2019/02/25/5c73eb0276ee5.png" alt="interface1.png"></a></p>
+<hr>
+<h1 id="类class">类（Class）</h1>
 <p>TypeScript 拥有所有⽬前 ECMAScript class 进⼊标准或还在提案的属性。包括继承、getter、setter、静态⽅法、装饰器等。</p>
-
 <p>在这个基础之上⼜添加 public、private 和 protected 三种修饰符。</p>
-
-<hr />
-
-<pre><code class="language-javascript">class Animal1 {
-  public name: string
-  public constructor(name: string) {
-    this.name = name
+<hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal1</span> {
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>
   }
 }
-let CatA = new Animal1('a')
-console.log(CatA.name)
-CatA.name = 'b'
-console.log(CatA.name)
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">CatA</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Animal1</span>(<span style="color:#e6db74">&#39;a&#39;</span>)
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">CatA</span>.<span style="color:#a6e22e">name</span>)
+<span style="color:#a6e22e">CatA</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;b&#39;</span>
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">CatA</span>.<span style="color:#a6e22e">name</span>)
 
-class Animal2 {
-  private name: string
-  public constructor(name: string) {
-    this.name = name
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal2</span> {
+  <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>
   }
 }
-let CatC = new Animal2('c')
-CatC.name = 'c'
-</code></pre>
-
-<hr />
-
-<pre><code class="language-javascript">class Animal {
-  protected name: string
-  public constructor(name: string) {
-    this.name = name
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">CatC</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Animal2</span>(<span style="color:#e6db74">&#39;c&#39;</span>)
+<span style="color:#a6e22e">CatC</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;c&#39;</span>
+</code></pre></div><hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> {
+  <span style="color:#66d9ef">protected</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>
   }
 }
 
-class Cat extends Animal {
-  constructor(name: string) {
-    super(name)
-    console.log(this.name)
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cat</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Animal</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span>) {
+    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">name</span>)
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>)
   }
 }
 
-// protect和private的区别就是protected可以在子类被访问
-</code></pre>
-
-<hr />
-
-<h1 id="泛型-generics">泛型（Generics）</h1>
-
+<span style="color:#75715e">// protect和private的区别就是protected可以在子类被访问
+</span></code></pre></div><hr>
+<h1 id="泛型generics">泛型（Generics）</h1>
 <p>泛型（Generics）是指在定义函数、接⼝或类的时候， 不预先指定具体的类型，⽽在使⽤的时候再指定类型的 ⼀种特性。</p>
-
-<hr />
-
-<p><a href="https://i.loli.net/2019/02/25/5c73eb02804c3.png"><img src="https://i.loli.net/2019/02/25/5c73eb02804c3.png" alt="generics.png" /></a></p>
-
-<hr />
-
+<hr>
+<p><a href="https://i.loli.net/2019/02/25/5c73eb02804c3.png"><img src="https://i.loli.net/2019/02/25/5c73eb02804c3.png" alt="generics.png"></a></p>
+<hr>
 <h1 id="how-typescript">How TypeScript?</h1>
-
 <h2 id="frontend">FrontEnd</h2>
-
 <p>@babel/preset-typescript</p>
-
-<h2 id="node-js">Node.js</h2>
-
+<h2 id="nodejs">Node.js</h2>
 <p>dev: ts-node
 prod: tsc</p>
-
 <h2 id="lint">Lint</h2>
-
 <p>typescript-eslint</p>
-
-<hr />
+<hr>
 
                 </section>
             </article>
@@ -311,6 +240,10 @@ prod: tsc</p>
 
     
     
+    
+        <li>
+            <a href="/post/2020/01/babel-plugin/">深入原理：Babel原理与Babel插件实践<aside class="dates">Jan 28 2020</aside></a>
+        </li>
     
         <li>
             <a href="/post/2019/10/macinstall/">我的电脑装了什么（2019版）<aside class="dates">Oct 3 2019</aside></a>
@@ -349,13 +282,14 @@ prod: tsc</p>
   })
   gitalk.render('gitalk-ctn')
 </script>
+
             
             
             <footer id="footer">
     
     <p class="small">
     
-       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i> 
+       © Copyright 2020 <i class="fa fa-heart" aria-hidden="true"></i> 
     
     </p>
     <p class="small">

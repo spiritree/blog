@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 深樹博客</title>
@@ -6,10 +6,19 @@
     <description>Recent content in Tags on 深樹博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 03 Oct 2019 22:45:35 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jan 2020 21:49:50 +0800</lastBuildDate>
     
 	<atom:link href="https://deeptree.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Babel</title>
+      <link>https://deeptree.me/tags/babel/</link>
+      <pubDate>Tue, 28 Jan 2020 21:49:50 +0800</pubDate>
+      
+      <guid>https://deeptree.me/tags/babel/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>macOS</title>
