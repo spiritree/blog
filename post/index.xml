@@ -21,10 +21,10 @@
 什么是Babel？ Babel是JavaScript的编译器，它可以将你ES6(ES2015)+语法的代码编译到ES5版本从而兼容落后的浏览器。Babel也设计了一套插件架构去做代码转换，所以你可以去设计独创的代码转换规则。
 在编写Babel插件之前，大家需要了解一下抽象语法树/AST的知识（熟知编译原理的可以快速跳过）。
 抽象语法树（AST） 抽象语法树是高级编程语言（Java、JavaScript等）转换成机器语言的桥梁。解析器会根据ECMAScript 标准「JavaScript语言规范」来对代码字符串进行词法分析，拆分成一个个词法单元，再遍历各个词法单元进行语法分析构造出AST。我们通过如下代码来分析原理：
-let str = &amp;#39;test&amp;#39;; str + &amp;#39;abc&amp;#39;; 词法分析（Lexical Analysis） 对代码解析时先进入词法分析阶段，tokenizer(分词器)会将原始代码按照特定字符(如let、var、=等保留字)分成一个个叫token的东西。token由分号、标签、变量、字符串等组成，tokenizer将tokens构造成如下数据结构。
+let str = &#39;test&#39;; str + &#39;abc&#39;;  词法分析（Lexical Analysis） 对代码解析时先进入词法分析阶段，tokenizer(分词器)会将原始代码按照特定字符(如let、var、=等保留字)分成一个个叫token的东西。token由分号、标签、变量、字符串等组成，tokenizer将tokens构造成如下数据结构。
 这是一个JavaScript简易编译器中词法分析的实现：https://github.com/jamiebuilds/the-super-tiny-compiler/blob/master/the-super-tiny-compiler.js#L381
 在线词法分析链接
-[ { &amp;#34;type&amp;#34;: &amp;#34;Keyword&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;let&amp;#34; }, { &amp;#34;type&amp;#34;: &amp;#34;Identifier&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;str&amp;#34; }, { &amp;#34;type&amp;#34;: &amp;#34;Punctuator&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;=&amp;#34; }, { &amp;#34;type&amp;#34;: &amp;#34;String&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;&amp;#39;test&amp;#39;&amp;#34; }, { &amp;#34;type&amp;#34;: &amp;#34;Punctuator&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;;&amp;#34; }, { &amp;#34;type&amp;#34;: &amp;#34;Identifier&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;str&amp;#34; }, { &amp;#34;type&amp;#34;: &amp;#34;Punctuator&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;+&amp;#34; }, { &amp;#34;type&amp;#34;: &amp;#34;String&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;&amp;#39;abc&amp;#39;&amp;#34; }, { &amp;#34;type&amp;#34;: &amp;#34;Punctuator&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;;&amp;#34; } ] 语法分析（Syntactic Analysis） 词法分析完毕后进入语法分析阶段，语法分析将tokens重新格式化为描述语法各部分及其相互关系的表示形式，这就是抽象语法树。</description>
+[ { &amp;quot;type&amp;quot;: &amp;quot;Keyword&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;let&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;Identifier&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;str&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;Punctuator&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;=&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;String&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;&#39;test&#39;&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;Punctuator&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;;&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;Identifier&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;str&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;Punctuator&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;+&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;String&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;&#39;abc&#39;&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;Punctuator&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;;&amp;quot; } ]  语法分析（Syntactic Analysis） 词法分析完毕后进入语法分析阶段，语法分析将tokens重新格式化为描述语法各部分及其相互关系的表示形式，这就是抽象语法树。</description>
     </item>
     
     <item>
@@ -74,7 +74,7 @@ storybook正在用TypeScript重构中 Vue3也在用TypeScript重构中  Github T
 从Content-Type可以看出需要使用FormData对象去上传
 红框部分则是&amp;lt;input type=&amp;quot;file&amp;quot; /&amp;gt;所生成的
 分析一通后，梳理流程为canvas=&amp;gt;blob=&amp;gt;File=&amp;gt;FormData=&amp;gt;POST
-代码 upload = () =&amp;gt; { return new Promise((resolve, reject) =&amp;gt; { canvasInstance.toBlob(blob =&amp;gt; { // blob转file  const file = new File([blob], &amp;#39;poster.png&amp;#39;, { type: &amp;#39;image/png&amp;#39;, lastModified: Date.now() }) const xhr = new XMLHttpRequest() xhr.onreadystatechange = () =&amp;gt; { try { if (xhr.readyState === 4 &amp;amp;&amp;amp; xhr.status &amp;gt;= 200 &amp;amp;&amp;amp; xhr.status &amp;lt; 400) { const res = JSON.</description>
+代码 upload = () =&amp;gt; { return new Promise((resolve, reject) =&amp;gt; { canvasInstance.toBlob(blob =&amp;gt; { // blob转file const file = new File([blob], &#39;poster.png&#39;, { type: &#39;image/png&#39;, lastModified: Date.now() }) const xhr = new XMLHttpRequest() xhr.onreadystatechange = () =&amp;gt; { try { if (xhr.readyState === 4 &amp;amp;&amp;amp; xhr.status &amp;gt;= 200 &amp;amp;&amp;amp; xhr.status &amp;lt; 400) { const res = JSON.</description>
     </item>
     
     <item>
@@ -85,7 +85,7 @@ storybook正在用TypeScript重构中 Vue3也在用TypeScript重构中  Github T
       <guid>https://deeptree.me/post/2018/06/passive/</guid>
       <description>起因  在移动端使用event.preventDefault()来阻止touchstart和touchmove事件发现无法实现
  打开Chrome控制台发现打印了如下文字
-[Intervention] Unable to preventDefault inside passive event listener due to target being treated as passive. See https://www.chromestatus.com/features/5093566007214080 点进网页看看发生了什么！
+[Intervention] Unable to preventDefault inside passive event listener due to target being treated as passive. See https://www.chromestatus.com/features/5093566007214080  点进网页看看发生了什么！
  AddEventListenerOptions defaults passive to false. With this change touchstart and touchmove listeners added to the document will default to passive:true (so that calls to preventDefault will be ignored)..
   If the value is explicitly provided in the AddEventListenerOptions it will continue having the value specified by the page.</description>
     </item>

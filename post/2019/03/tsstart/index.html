@@ -145,20 +145,21 @@
 </ul>
 <hr>
 <h1 id="基础类型">基础类型</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// 字符串
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">str</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a&#39;</span>
-<span style="color:#75715e">// 布尔值
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">isCC</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">boolean</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
-<span style="color:#75715e">// 数值
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">LIMIT</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
-<span style="color:#75715e">// 空
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">consoleStr</span>()<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;abc&#39;</span>)
+<pre><code class="language-javascript">// 字符串
+const str: string = 'a'
+// 布尔值
+const isCC: boolean = true
+// 数值
+const LIMIT: number = 10
+// 空
+function consoleStr(): void {
+  console.log('abc')
 }
-<span style="color:#75715e">// null and undefined
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">u</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">undefined</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">undefined</span>
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">n</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>
-</code></pre></div><hr>
+// null and undefined
+const u: undefined = undefined
+const n: null = null
+</code></pre>
+<hr>
 <h1 id="数组">数组</h1>
 <p><img src="https://i.loli.net/2019/02/17/5c69700398db7.png" alt="5.png"></p>
 <hr>
@@ -175,42 +176,44 @@
 <p>TypeScript 拥有所有⽬前 ECMAScript class 进⼊标准或还在提案的属性。包括继承、getter、setter、静态⽅法、装饰器等。</p>
 <p>在这个基础之上⼜添加 public、private 和 protected 三种修饰符。</p>
 <hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal1</span> {
-  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span>
-  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span>) {
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>
+<pre><code class="language-javascript">class Animal1 {
+  public name: string
+  public constructor(name: string) {
+    this.name = name
   }
 }
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">CatA</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Animal1</span>(<span style="color:#e6db74">&#39;a&#39;</span>)
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">CatA</span>.<span style="color:#a6e22e">name</span>)
-<span style="color:#a6e22e">CatA</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;b&#39;</span>
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">CatA</span>.<span style="color:#a6e22e">name</span>)
+let CatA = new Animal1('a')
+console.log(CatA.name)
+CatA.name = 'b'
+console.log(CatA.name)
 
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal2</span> {
-  <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span>
-  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span>) {
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>
+class Animal2 {
+  private name: string
+  public constructor(name: string) {
+    this.name = name
   }
 }
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">CatC</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Animal2</span>(<span style="color:#e6db74">&#39;c&#39;</span>)
-<span style="color:#a6e22e">CatC</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;c&#39;</span>
-</code></pre></div><hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> {
-  <span style="color:#66d9ef">protected</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span>
-  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span>) {
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>
-  }
-}
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cat</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Animal</span> {
-  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span>) {
-    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">name</span>)
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>)
+let CatC = new Animal2('c')
+CatC.name = 'c'
+</code></pre>
+<hr>
+<pre><code class="language-javascript">class Animal {
+  protected name: string
+  public constructor(name: string) {
+    this.name = name
   }
 }
 
-<span style="color:#75715e">// protect和private的区别就是protected可以在子类被访问
-</span></code></pre></div><hr>
+class Cat extends Animal {
+  constructor(name: string) {
+    super(name)
+    console.log(this.name)
+  }
+}
+
+// protect和private的区别就是protected可以在子类被访问
+</code></pre>
+<hr>
 <h1 id="泛型generics">泛型（Generics）</h1>
 <p>泛型（Generics）是指在定义函数、接⼝或类的时候， 不预先指定具体的类型，⽽在使⽤的时候再指定类型的 ⼀种特性。</p>
 <hr>

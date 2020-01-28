@@ -87,38 +87,39 @@
 <p>红框部分则是<code>&lt;input type=&quot;file&quot; /&gt;</code>所生成的</p>
 <p>分析一通后，梳理流程为canvas=&gt;blob=&gt;File=&gt;FormData=&gt;POST</p>
 <h2 id="代码">代码</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">upload</span> <span style="color:#f92672">=</span> () =&gt; {
-  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; {
-    <span style="color:#a6e22e">canvasInstance</span>.<span style="color:#a6e22e">toBlob</span>(<span style="color:#a6e22e">blob</span> =&gt; {
-      <span style="color:#75715e">// blob转file
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">file</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">File</span>([<span style="color:#a6e22e">blob</span>], <span style="color:#e6db74">&#39;poster.png&#39;</span>, {
-        <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;image/png&#39;</span>,
-        <span style="color:#a6e22e">lastModified</span><span style="color:#f92672">:</span> Date.<span style="color:#a6e22e">now</span>()
+<pre><code class="language-javascript">upload = () =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    canvasInstance.toBlob(blob =&gt; {
+      // blob转file
+      const file = new File([blob], 'poster.png', {
+        type: 'image/png',
+        lastModified: Date.now()
       })
-      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">xhr</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">XMLHttpRequest</span>()
-      <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">onreadystatechange</span> <span style="color:#f92672">=</span> () =&gt; {
-        <span style="color:#66d9ef">try</span> {
-          <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">readyState</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">status</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">200</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">status</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">400</span>) {
-            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">res</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">responseText</span>)
-            <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">res</span>)
+      const xhr = new XMLHttpRequest()
+      xhr.onreadystatechange = () =&gt; {
+        try {
+          if (xhr.readyState === 4 &amp;&amp; xhr.status &gt;= 200 &amp;&amp; xhr.status &lt; 400) {
+            const res = JSON.parse(xhr.responseText)
+            resolve(res)
           }
-        } <span style="color:#66d9ef">catch</span> {
-          <span style="color:#a6e22e">reject</span>(<span style="color:#66d9ef">new</span> Error(<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">statusText</span>))
+        } catch {
+          reject(new Error(xhr.statusText))
         }
       }
-      <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">open</span>(
-        <span style="color:#e6db74">&#39;POST&#39;</span>,
-        <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">cdnUrl</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>,
-        <span style="color:#66d9ef">true</span>
+      xhr.open(
+        'POST',
+        `${cdnUrl}`,
+        true
       )
-      <span style="color:#75715e">// 转换成通过input上传的文件
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">formData</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">FormData</span>()
-      <span style="color:#a6e22e">formData</span>.<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#39;file&#39;</span>, <span style="color:#a6e22e">file</span>)
-      <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">send</span>(<span style="color:#a6e22e">formData</span>)
-    }, <span style="color:#e6db74">&#39;image/png&#39;</span>)
+      // 转换成通过input上传的文件
+      let formData = new FormData()
+      formData.append('file', file)
+      xhr.send(formData)
+    }, 'image/png')
   })
 }
-</code></pre></div>
+</code></pre>
+
                 </section>
             </article>
 

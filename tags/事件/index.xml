@@ -19,7 +19,7 @@
       <guid>https://deeptree.me/post/2018/06/passive/</guid>
       <description>起因  在移动端使用event.preventDefault()来阻止touchstart和touchmove事件发现无法实现
  打开Chrome控制台发现打印了如下文字
-[Intervention] Unable to preventDefault inside passive event listener due to target being treated as passive. See https://www.chromestatus.com/features/5093566007214080 点进网页看看发生了什么！
+[Intervention] Unable to preventDefault inside passive event listener due to target being treated as passive. See https://www.chromestatus.com/features/5093566007214080  点进网页看看发生了什么！
  AddEventListenerOptions defaults passive to false. With this change touchstart and touchmove listeners added to the document will default to passive:true (so that calls to preventDefault will be ignored)..
   If the value is explicitly provided in the AddEventListenerOptions it will continue having the value specified by the page.</description>
     </item>
