@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Babel on 深樹博客</title>
-    <link>https://deeptree.me/tags/babel/</link>
+    <link>https://deeptree.ink/tags/babel/</link>
     <description>Recent content in Babel on 深樹博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 28 Jan 2020 21:49:50 +0800</lastBuildDate>
     
-	<atom:link href="https://deeptree.me/tags/babel/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://deeptree.ink/tags/babel/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>深入原理：Babel原理与Babel插件实践</title>
-      <link>https://deeptree.me/post/2020/01/babel-plugin/</link>
+      <link>https://deeptree.ink/post/2020/01/babel-plugin/</link>
       <pubDate>Tue, 28 Jan 2020 21:49:50 +0800</pubDate>
       
-      <guid>https://deeptree.me/post/2020/01/babel-plugin/</guid>
+      <guid>https://deeptree.ink/post/2020/01/babel-plugin/</guid>
       <description>前言 前端开发从「刀耕火种」过渡到「现代化」自动构建工程体系的过程中，Babel扮演了一个举足轻重的地位，使得我们可以用与时俱进的代码语法且最大程度上不受浏览器版本的约束，本文对如何使用Babel不再赘述，着重介绍Babel的原理和如何实现Babel插件。
 什么是Babel？ Babel是JavaScript的编译器，它可以将你ES6(ES2015)+语法的代码编译到ES5版本从而兼容落后的浏览器。Babel也设计了一套插件架构去做代码转换，所以你可以去设计独创的代码转换规则。
 在编写Babel插件之前，大家需要了解一下抽象语法树/AST的知识（熟知编译原理的可以快速跳过）。

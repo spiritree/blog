@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 深樹博客</title>
-    <link>https://deeptree.me/tags/</link>
+    <link>https://deeptree.ink/tags/</link>
     <description>Recent content in Tags on 深樹博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 28 Jan 2020 21:49:50 +0800</lastBuildDate>
     
-	<atom:link href="https://deeptree.me/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://deeptree.ink/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Babel</title>
-      <link>https://deeptree.me/tags/babel/</link>
+      <link>https://deeptree.ink/tags/babel/</link>
       <pubDate>Tue, 28 Jan 2020 21:49:50 +0800</pubDate>
       
-      <guid>https://deeptree.me/tags/babel/</guid>
+      <guid>https://deeptree.ink/tags/babel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>macOS</title>
-      <link>https://deeptree.me/tags/macos/</link>
+      <link>https://deeptree.ink/tags/macos/</link>
       <pubDate>Thu, 03 Oct 2019 22:45:35 +0800</pubDate>
       
-      <guid>https://deeptree.me/tags/macos/</guid>
+      <guid>https://deeptree.ink/tags/macos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>TypeScript</title>
-      <link>https://deeptree.me/tags/typescript/</link>
+      <link>https://deeptree.ink/tags/typescript/</link>
       <pubDate>Wed, 13 Mar 2019 11:22:55 +0800</pubDate>
       
-      <guid>https://deeptree.me/tags/typescript/</guid>
+      <guid>https://deeptree.ink/tags/typescript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>2018</title>
-      <link>https://deeptree.me/tags/2018/</link>
+      <link>https://deeptree.ink/tags/2018/</link>
       <pubDate>Mon, 31 Dec 2018 21:53:55 +0800</pubDate>
       
-      <guid>https://deeptree.me/tags/2018/</guid>
+      <guid>https://deeptree.ink/tags/2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>canvas</title>
-      <link>https://deeptree.me/tags/canvas/</link>
+      <link>https://deeptree.ink/tags/canvas/</link>
       <pubDate>Tue, 17 Jul 2018 17:47:01 +0800</pubDate>
       
-      <guid>https://deeptree.me/tags/canvas/</guid>
+      <guid>https://deeptree.ink/tags/canvas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>事件</title>
-      <link>https://deeptree.me/tags/%E4%BA%8B%E4%BB%B6/</link>
+      <link>https://deeptree.ink/tags/%E4%BA%8B%E4%BB%B6/</link>
       <pubDate>Sat, 23 Jun 2018 22:42:31 +0800</pubDate>
       
-      <guid>https://deeptree.me/tags/%E4%BA%8B%E4%BB%B6/</guid>
+      <guid>https://deeptree.ink/tags/%E4%BA%8B%E4%BB%B6/</guid>
       <description></description>
     </item>
     

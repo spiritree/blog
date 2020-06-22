@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>macOS on 深樹博客</title>
-    <link>https://deeptree.me/tags/macos/</link>
+    <link>https://deeptree.ink/tags/macos/</link>
     <description>Recent content in macOS on 深樹博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 03 Oct 2019 22:45:35 +0800</lastBuildDate>
     
-	<atom:link href="https://deeptree.me/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://deeptree.ink/tags/macos/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>我的电脑装了什么（2019版）</title>
-      <link>https://deeptree.me/post/2019/10/macinstall/</link>
+      <link>https://deeptree.ink/post/2019/10/macinstall/</link>
       <pubDate>Thu, 03 Oct 2019 22:45:35 +0800</pubDate>
       
-      <guid>https://deeptree.me/post/2019/10/macinstall/</guid>
+      <guid>https://deeptree.ink/post/2019/10/macinstall/</guid>
       <description>Mac软件 互联网  ShadowsocksX-R clashX 下一代工具，配合v2ray  开发  VSCode 字体为Fira Code brew 安装利器，类似于apt-get 终端 iTerm2 + oh my zsh-&amp;gt;Prezto 本人暂时还是用zsh  spaceship-prompt 显示更多辅助信息 主题：ys zsh-autosuggestions zsh-syntax-highlighting autojump    开发辅助  Postman API请求 Charles 抓包，安卓考虑httpcanary Gas Mask Hosts 管理  输入  Reeder RSS 阅读软件 Feedly RSS 阅读网站 RSSHub 寻找RSS源  输出  有道云笔记 对于安卓用户来说真的是最好的了 LICEcap GIF录屏工具 Microsoft Whiteboard  效率  Alfred  workflows   CheatSheet 显示当前app的快捷键 HyperSwitch Tab键增强 Magnet 分屏  命令行 brew  autojump 目录跳转 bat 带行号的 cat，可以配 alias cat=&amp;quot;bat&amp;quot; fd 高级find  node  fkill 进程，端口kill  工具  Keka 压缩工具 FileZilla FTP客户端 CleanMyMac 系统清理 AppCleaner 卸载App，干净 IINA 视频播放 Motrix 下载工具 Parallels Desktop 虚拟机 iStat Menus 系统监控  </description>
     </item>
     

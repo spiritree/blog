@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 深樹博客</title>
-    <link>https://deeptree.me/post/</link>
+    <link>https://deeptree.ink/post/</link>
     <description>Recent content in Posts on 深樹博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 28 Jan 2020 21:49:50 +0800</lastBuildDate>
     
-	<atom:link href="https://deeptree.me/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://deeptree.ink/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>深入原理：Babel原理与Babel插件实践</title>
-      <link>https://deeptree.me/post/2020/01/babel-plugin/</link>
+      <link>https://deeptree.ink/post/2020/01/babel-plugin/</link>
       <pubDate>Tue, 28 Jan 2020 21:49:50 +0800</pubDate>
       
-      <guid>https://deeptree.me/post/2020/01/babel-plugin/</guid>
+      <guid>https://deeptree.ink/post/2020/01/babel-plugin/</guid>
       <description>前言 前端开发从「刀耕火种」过渡到「现代化」自动构建工程体系的过程中，Babel扮演了一个举足轻重的地位，使得我们可以用与时俱进的代码语法且最大程度上不受浏览器版本的约束，本文对如何使用Babel不再赘述，着重介绍Babel的原理和如何实现Babel插件。
 什么是Babel？ Babel是JavaScript的编译器，它可以将你ES6(ES2015)+语法的代码编译到ES5版本从而兼容落后的浏览器。Babel也设计了一套插件架构去做代码转换，所以你可以去设计独创的代码转换规则。
 在编写Babel插件之前，大家需要了解一下抽象语法树/AST的知识（熟知编译原理的可以快速跳过）。
@@ -29,19 +29,19 @@ let str = &#39;test&#39;; str + &#39;abc&#39;;  词法分析（Lexical Analysis�
     
     <item>
       <title>我的电脑装了什么（2019版）</title>
-      <link>https://deeptree.me/post/2019/10/macinstall/</link>
+      <link>https://deeptree.ink/post/2019/10/macinstall/</link>
       <pubDate>Thu, 03 Oct 2019 22:45:35 +0800</pubDate>
       
-      <guid>https://deeptree.me/post/2019/10/macinstall/</guid>
+      <guid>https://deeptree.ink/post/2019/10/macinstall/</guid>
       <description>Mac软件 互联网  ShadowsocksX-R clashX 下一代工具，配合v2ray  开发  VSCode 字体为Fira Code brew 安装利器，类似于apt-get 终端 iTerm2 + oh my zsh-&amp;gt;Prezto 本人暂时还是用zsh  spaceship-prompt 显示更多辅助信息 主题：ys zsh-autosuggestions zsh-syntax-highlighting autojump    开发辅助  Postman API请求 Charles 抓包，安卓考虑httpcanary Gas Mask Hosts 管理  输入  Reeder RSS 阅读软件 Feedly RSS 阅读网站 RSSHub 寻找RSS源  输出  有道云笔记 对于安卓用户来说真的是最好的了 LICEcap GIF录屏工具 Microsoft Whiteboard  效率  Alfred  workflows   CheatSheet 显示当前app的快捷键 HyperSwitch Tab键增强 Magnet 分屏  命令行 brew  autojump 目录跳转 bat 带行号的 cat，可以配 alias cat=&amp;quot;bat&amp;quot; fd 高级find  node  fkill 进程，端口kill  工具  Keka 压缩工具 FileZilla FTP客户端 CleanMyMac 系统清理 AppCleaner 卸载App，干净 IINA 视频播放 Motrix 下载工具 Parallels Desktop 虚拟机 iStat Menus 系统监控  </description>
     </item>
     
     <item>
       <title>Why and How TypeScript?</title>
-      <link>https://deeptree.me/post/2019/03/tsstart/</link>
+      <link>https://deeptree.ink/post/2019/03/tsstart/</link>
       <pubDate>Wed, 13 Mar 2019 11:22:55 +0800</pubDate>
       
-      <guid>https://deeptree.me/post/2019/03/tsstart/</guid>
+      <guid>https://deeptree.ink/post/2019/03/tsstart/</guid>
       <description>Why TypeScript? 业界动态 Facebook的yarn宣布用TypeScript重写 https://github.com/yarnpkg/yarn/issues/6953
 Facebook的Jest宣布用TypeScript重写 https://github.com/facebook/jest/pull/7554
 storybook正在用TypeScript重构中 Vue3也在用TypeScript重构中  Github Trending 
@@ -51,10 +51,10 @@ storybook正在用TypeScript重构中 Vue3也在用TypeScript重构中  Github T
     
     <item>
       <title>2018年报总结</title>
-      <link>https://deeptree.me/post/2018/12/2018/</link>
+      <link>https://deeptree.ink/post/2018/12/2018/</link>
       <pubDate>Mon, 31 Dec 2018 21:53:55 +0800</pubDate>
       
-      <guid>https://deeptree.me/post/2018/12/2018/</guid>
+      <guid>https://deeptree.ink/post/2018/12/2018/</guid>
       <description>迷茫与低迷 去年以「软件开发工程师」的身份进入上一家公司开始实习。在此期间，我大部分时间都在做后台管理系统，公司里的小伙伴人均「全栈」， 我自然也是学习Spring Boot全家桶（Java）+Vue全家桶（JavaScript），期间也完成了人生中第一个技术分享（关于webpack）。同时也很感谢陆老师和华哥，学到了各种经验。 但越学越迷茫，因为我做日常小需求没啥问题，可日后出去面试是前端还是后端呢？
 随后在v2ex上征询了下前辈们的意见，最后还是决定向着自己更喜欢的前端方向走。年后找工作的经历跌宕起伏，但结果是好的。
 重新开始 今年年中以「前端开发工程师」的身份进入现在的公司。从CSS弱鸡成长到常规布局和动画都能应付了；从Vue全家桶也转到React全家桶。 也接触了组件库开发、webpack优化、babel升级和node端的开发，这符合我心中大前端的概念。 虽然比较辛苦，但是也感觉到自己在快速成长中，感谢整个前端组的伙伴们，帮助了我许多。
@@ -63,10 +63,10 @@ storybook正在用TypeScript重构中 Vue3也在用TypeScript重构中  Github T
     
     <item>
       <title>一键上传canvas所生成的图片至CDN</title>
-      <link>https://deeptree.me/post/2018/07/uploadcanvasimg/</link>
+      <link>https://deeptree.ink/post/2018/07/uploadcanvasimg/</link>
       <pubDate>Tue, 17 Jul 2018 17:47:01 +0800</pubDate>
       
-      <guid>https://deeptree.me/post/2018/07/uploadcanvasimg/</guid>
+      <guid>https://deeptree.ink/post/2018/07/uploadcanvasimg/</guid>
       <description>起因 最近在做动态生成海报的项目，有生成海报后上传当前canvas图片的需求。
 分析 脑袋一拍，思索出流程是这样canvas=&amp;gt;base64=&amp;gt;POST接口。但是常见的CDN不支持base64啊！查了下发现有canvas.toBlob（兼容性为Chrome50+）
 于是流程改为canvas=&amp;gt;blob=&amp;gt;POST接口，但发现CDN还是不吃这一套，接口报错
@@ -79,10 +79,10 @@ storybook正在用TypeScript重构中 Vue3也在用TypeScript重构中  Github T
     
     <item>
       <title>addEventListener中的passive属性踩坑</title>
-      <link>https://deeptree.me/post/2018/06/passive/</link>
+      <link>https://deeptree.ink/post/2018/06/passive/</link>
       <pubDate>Sat, 23 Jun 2018 22:42:31 +0800</pubDate>
       
-      <guid>https://deeptree.me/post/2018/06/passive/</guid>
+      <guid>https://deeptree.ink/post/2018/06/passive/</guid>
       <description>起因  在移动端使用event.preventDefault()来阻止touchstart和touchmove事件发现无法实现
  打开Chrome控制台发现打印了如下文字
 [Intervention] Unable to preventDefault inside passive event listener due to target being treated as passive. See https://www.chromestatus.com/features/5093566007214080  点进网页看看发生了什么！

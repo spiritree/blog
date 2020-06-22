@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>事件 on 深樹博客</title>
-    <link>https://deeptree.me/tags/%E4%BA%8B%E4%BB%B6/</link>
+    <link>https://deeptree.ink/tags/%E4%BA%8B%E4%BB%B6/</link>
     <description>Recent content in 事件 on 深樹博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 23 Jun 2018 22:42:31 +0800</lastBuildDate>
     
-	<atom:link href="https://deeptree.me/tags/%E4%BA%8B%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://deeptree.ink/tags/%E4%BA%8B%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>addEventListener中的passive属性踩坑</title>
-      <link>https://deeptree.me/post/2018/06/passive/</link>
+      <link>https://deeptree.ink/post/2018/06/passive/</link>
       <pubDate>Sat, 23 Jun 2018 22:42:31 +0800</pubDate>
       
-      <guid>https://deeptree.me/post/2018/06/passive/</guid>
+      <guid>https://deeptree.ink/post/2018/06/passive/</guid>
       <description>起因  在移动端使用event.preventDefault()来阻止touchstart和touchmove事件发现无法实现
  打开Chrome控制台发现打印了如下文字
 [Intervention] Unable to preventDefault inside passive event listener due to target being treated as passive. See https://www.chromestatus.com/features/5093566007214080  点进网页看看发生了什么！

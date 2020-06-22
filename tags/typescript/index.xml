@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>TypeScript on 深樹博客</title>
-    <link>https://deeptree.me/tags/typescript/</link>
+    <link>https://deeptree.ink/tags/typescript/</link>
     <description>Recent content in TypeScript on 深樹博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 13 Mar 2019 11:22:55 +0800</lastBuildDate>
     
-	<atom:link href="https://deeptree.me/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://deeptree.ink/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Why and How TypeScript?</title>
-      <link>https://deeptree.me/post/2019/03/tsstart/</link>
+      <link>https://deeptree.ink/post/2019/03/tsstart/</link>
       <pubDate>Wed, 13 Mar 2019 11:22:55 +0800</pubDate>
       
-      <guid>https://deeptree.me/post/2019/03/tsstart/</guid>
+      <guid>https://deeptree.ink/post/2019/03/tsstart/</guid>
       <description>Why TypeScript? 业界动态 Facebook的yarn宣布用TypeScript重写 https://github.com/yarnpkg/yarn/issues/6953
 Facebook的Jest宣布用TypeScript重写 https://github.com/facebook/jest/pull/7554
 storybook正在用TypeScript重构中 Vue3也在用TypeScript重构中  Github Trending 
