@@ -9,11 +9,10 @@
 		
 		
 		<title>addEventListener中的passive属性踩坑 &middot; 深樹博客</title>
-		<link rel="dns-prefetch" href="https://deeptree.ink" />
 		<link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
-		<link rel="shortcut icon" href="https://deeptree.ink/images/favicon.ico">
-		<link rel="stylesheet" href="https://deeptree.ink/css/style.min.css">
-		<link rel="stylesheet" href="https://deeptree.ink/css/highlight.css">
+		<link rel="shortcut icon" href="https://spiritree.github.io/blog/images/favicon.ico">
+		<link rel="stylesheet" href="https://spiritree.github.io/blog/css/style.min.css">
+		<link rel="stylesheet" href="https://spiritree.github.io/blog/css/highlight.css">
 
 		
 		
@@ -30,11 +29,11 @@
        <nav class="main-nav">
 	
 	
-		<a href='https://deeptree.ink/'> <span class="arrow">←</span>Home</a>
+		<a href='https://spiritree.github.io/blog/'> <span class="arrow">←</span>Home</a>
 	
-	<a href='https://deeptree.ink/post'>Archive</a>
-	<a href='https://deeptree.ink/tags'>Tags</a>
-	<a href='https://deeptree.ink/about'>About</a>
+	<a href='https://spiritree.github.io/blog/post'>Archive</a>
+	<a href='https://spiritree.github.io/blog/tags'>Tags</a>
+	<a href='https://spiritree.github.io/blog/about'>About</a>
 
 	
 
@@ -56,7 +55,7 @@
                       
                       
                           
-                              <a href="https://deeptree.ink/tags/%E4%BA%8B%E4%BB%B6">事件</a>
+                              <a href="https://spiritree.github.io/blog/tags/%E4%BA%8B%E4%BB%B6">事件</a>
                           
                       
                       
@@ -169,23 +168,27 @@ elem.addEventListener(
     
     
         <li>
-            <a href="/post/2020/01/babel-plugin/">深入原理：Babel原理与Babel插件实践<aside class="dates">Jan 28 2020</aside></a>
+            <a href="https://spiritree.github.io/blog/post/2020/01/babel-plugin/">深入原理：Babel原理与Babel插件实践<aside class="dates">Jan 28 2020</aside></a>
         </li>
     
         <li>
-            <a href="/post/2019/10/macinstall/">我的电脑装了什么（2019版）<aside class="dates">Oct 3 2019</aside></a>
+            <a href="https://spiritree.github.io/blog/post/2019/10/macinstall/">我的电脑装了什么（2019版）<aside class="dates">Oct 3 2019</aside></a>
         </li>
     
         <li>
-            <a href="/post/2019/03/tsstart/">Why and How TypeScript?<aside class="dates">Mar 13 2019</aside></a>
+            <a href="https://spiritree.github.io/blog/post/2019/03/tsstart/">Why and How TypeScript?<aside class="dates">Mar 13 2019</aside></a>
         </li>
     
         <li>
-            <a href="/post/2018/12/2018/">2018年报总结<aside class="dates">Dec 31 2018</aside></a>
+            <a href="https://spiritree.github.io/blog/post/2018/12/2018/">2018年报总结<aside class="dates">Dec 31 2018</aside></a>
         </li>
     
         <li>
-            <a href="/post/2018/07/uploadcanvasimg/">一键上传canvas所生成的图片至CDN<aside class="dates">Jul 17 2018</aside></a>
+            <a href="https://spiritree.github.io/blog/post/2018/07/uploadcanvasimg/">一键上传canvas所生成的图片至CDN<aside class="dates">Jul 17 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="https://spiritree.github.io/blog/post/2018/06/passive/">addEventListener中的passive属性踩坑<aside class="dates">Jun 23 2018</aside></a>
         </li>
     
 </ul>
@@ -201,7 +204,7 @@ elem.addEventListener(
     owner: 'spiritree',
     repo: 'blog',
     title: 'addEventListener中的passive属性踩坑',
-    body: '本文链接:https:\/\/deeptree.ink\/post\/2018\/06\/passive\/\n简介:在监听touchstart和touchmove时，发现preventDefault失效。本文介绍了踩坑详情和解决方法\n\n## 起因\n\n\x3e 在移动端使用`event.preventDefault()`来阻止`touchstart`和`touchmove`事件发现无法实现\n\n打开Chrome控制台发现打印了如下文字\n\n```bash\n[Intervention] Unable to preventDefault inside passive event listener due to target being treated as passive. See https:\/\/www.chromestatus.com\/features\/5093566007214080\n```\n\n点进网页看看发生了什么！\n\n\x3e AddEventListenerOptions defaults passive to false. With this change touchstart and touchmove listeners added to the document will default to passive:true (so that calls to preventDefault will be ignored)..\n \n\x3e If the value is explicitly provided in the AddEventListenerOptions it will continue having the value specified by the page.\n \n\x3e This is behind a flag starting in Chrome 54, and enabled by default in Chrome 56. See https:\/\/developers.google.com\/web\/updates\/2017\/01\/scrolling-intervention\n\n大意是：为了移动端性能考虑，在监听`touchstart`和`touchmove`时，默认设置`addEventListener`中的`passive`为`true`（这样就导致了`preventDefault`失效）\n\n## 为什么Chrome这样做？\n\n\x3e https:\/\/developers.google.com\/web\/updates\/2017\/01\/scrolling-intervention\n\n**Performance!**\n可以减少250ms左右的延迟\n\nPassive event listeners是2016年Google I\/O 上同 PWA 概念一起被提出，但是同PWA不同，Passive event listeners \n的作用很简单，如果用简单一句话来解释就是：提升页面滑动的流畅度。\n\nChrome 51 和 Firefox 49 已经支持 passive 属性。如果浏览器不支持，已经有人做了非常巧妙地 polyfill\n\n```javascript\n\/\/ Test via a getter in the options object to see \n\/\/ if the passive property is accessed\nvar supportsPassive = false;\ntry {\n  var opts = Object.defineProperty({}, \x27passive\x27, {\n    get: function() {\n      supportsPassive = true;\n    }\n  });\n  window.addEventListener(\x22test\x22, null, opts);\n} catch (e) {}\n\n\/\/ Use our detect\x27s results. \n\/\/ passive applied if supported, capture will be false either way.\nelem.addEventListener(\n  \x27touchstart\x27,\n  fn,\n  supportsPassive ? { passive: true } : false\n); \n```\n在Vue中你可以通过如下代码来提升移动端性能够\n```html\n\x3cdiv v-on:scroll.passive=\x22onScroll\x22\x3e...\x3c\/div\x3e\n```\n\n在React和其他框架\/非框架中只能手动绑定了\n\n```javascript\nelem.addEventListener(\x27touchmove\x27, func, { passive: true })\n```\n\n记得用完解绑！\n```javascript\nelem.removeEventListener(\x27touchmove\x27, func, false)\n```\n\n## 解决方法\n\n### 设置touch-action?\n\n在网上搜了很多方法，有不少答案都指向设置`touch-action: none`\n\n虽然设置后的确Chrome的确不报提示了，但是`preventDefault`依然没有生效\n\n### addEventListener中设置passive\n\n只能自己手动来绑定事件了\n\n```javascript\nelem.addEventListener(\x27touchmove\x27, func, { passive: false })\n```\n\n同样，用完要记得解绑~\n\n```javascript\nelem.removeEventListener(\x27touchmove\x27, func, false)\n```\n\n## 参考文章\n\nhttps:\/\/segmentfault.com\/a\/1190000007913386',
+    body: '本文链接:https:\/\/spiritree.github.io\/blog\/post\/2018\/06\/passive\/\n简介:在监听touchstart和touchmove时，发现preventDefault失效。本文介绍了踩坑详情和解决方法\n\n## 起因\n\n\u003e 在移动端使用`event.preventDefault()`来阻止`touchstart`和`touchmove`事件发现无法实现\n\n打开Chrome控制台发现打印了如下文字\n\n```bash\n[Intervention] Unable to preventDefault inside passive event listener due to target being treated as passive. See https:\/\/www.chromestatus.com\/features\/5093566007214080\n```\n\n点进网页看看发生了什么！\n\n\u003e AddEventListenerOptions defaults passive to false. With this change touchstart and touchmove listeners added to the document will default to passive:true (so that calls to preventDefault will be ignored)..\n \n\u003e If the value is explicitly provided in the AddEventListenerOptions it will continue having the value specified by the page.\n \n\u003e This is behind a flag starting in Chrome 54, and enabled by default in Chrome 56. See https:\/\/developers.google.com\/web\/updates\/2017\/01\/scrolling-intervention\n\n大意是：为了移动端性能考虑，在监听`touchstart`和`touchmove`时，默认设置`addEventListener`中的`passive`为`true`（这样就导致了`preventDefault`失效）\n\n## 为什么Chrome这样做？\n\n\u003e https:\/\/developers.google.com\/web\/updates\/2017\/01\/scrolling-intervention\n\n**Performance!**\n可以减少250ms左右的延迟\n\nPassive event listeners是2016年Google I\/O 上同 PWA 概念一起被提出，但是同PWA不同，Passive event listeners \n的作用很简单，如果用简单一句话来解释就是：提升页面滑动的流畅度。\n\nChrome 51 和 Firefox 49 已经支持 passive 属性。如果浏览器不支持，已经有人做了非常巧妙地 polyfill\n\n```javascript\n\/\/ Test via a getter in the options object to see \n\/\/ if the passive property is accessed\nvar supportsPassive = false;\ntry {\n  var opts = Object.defineProperty({}, \u0027passive\u0027, {\n    get: function() {\n      supportsPassive = true;\n    }\n  });\n  window.addEventListener(\u0022test\u0022, null, opts);\n} catch (e) {}\n\n\/\/ Use our detect\u0027s results. \n\/\/ passive applied if supported, capture will be false either way.\nelem.addEventListener(\n  \u0027touchstart\u0027,\n  fn,\n  supportsPassive ? { passive: true } : false\n); \n```\n在Vue中你可以通过如下代码来提升移动端性能够\n```html\n\u003cdiv v-on:scroll.passive=\u0022onScroll\u0022\u003e...\u003c\/div\u003e\n```\n\n在React和其他框架\/非框架中只能手动绑定了\n\n```javascript\nelem.addEventListener(\u0027touchmove\u0027, func, { passive: true })\n```\n\n记得用完解绑！\n```javascript\nelem.removeEventListener(\u0027touchmove\u0027, func, false)\n```\n\n## 解决方法\n\n### 设置touch-action?\n\n在网上搜了很多方法，有不少答案都指向设置`touch-action: none`\n\n虽然设置后的确Chrome的确不报提示了，但是`preventDefault`依然没有生效\n\n### addEventListener中设置passive\n\n只能自己手动来绑定事件了\n\n```javascript\nelem.addEventListener(\u0027touchmove\u0027, func, { passive: false })\n```\n\n同样，用完要记得解绑~\n\n```javascript\nelem.removeEventListener(\u0027touchmove\u0027, func, false)\n```\n\n## 参考文章\n\nhttps:\/\/segmentfault.com\/a\/1190000007913386',
     labels: ["事件"],
     clientID: '00a0202c161baf1e3c08',
     clientSecret: '205f6c77990b4e455ef793a28ae45b4506c40ddd',
@@ -216,7 +219,7 @@ elem.addEventListener(
     
     <p class="small">
     
-       © Copyright 2020 <i class="fa fa-heart" aria-hidden="true"></i> 
+       © Copyright 2022 <i class="fa fa-heart" aria-hidden="true"></i> 
     
     </p>
     <p class="small">

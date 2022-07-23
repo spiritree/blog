@@ -2,29 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Babel on 深樹博客</title>
-    <link>https://deeptree.ink/tags/babel/</link>
+    <link>https://spiritree.github.io/blog/tags/babel/</link>
     <description>Recent content in Babel on 深樹博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 28 Jan 2020 21:49:50 +0800</lastBuildDate>
-    
-	<atom:link href="https://deeptree.ink/tags/babel/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 28 Jan 2020 21:49:50 +0800</lastBuildDate><atom:link href="https://spiritree.github.io/blog/tags/babel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>深入原理：Babel原理与Babel插件实践</title>
-      <link>https://deeptree.ink/post/2020/01/babel-plugin/</link>
+      <link>https://spiritree.github.io/blog/post/2020/01/babel-plugin/</link>
       <pubDate>Tue, 28 Jan 2020 21:49:50 +0800</pubDate>
       
-      <guid>https://deeptree.ink/post/2020/01/babel-plugin/</guid>
+      <guid>https://spiritree.github.io/blog/post/2020/01/babel-plugin/</guid>
       <description>前言 前端开发从「刀耕火种」过渡到「现代化」自动构建工程体系的过程中，Babel扮演了一个举足轻重的地位，使得我们可以用与时俱进的代码语法且最大程度上不受浏览器版本的约束，本文对如何使用Babel不再赘述，着重介绍Babel的原理和如何实现Babel插件。
 什么是Babel？ Babel是JavaScript的编译器，它可以将你ES6(ES2015)+语法的代码编译到ES5版本从而兼容落后的浏览器。Babel也设计了一套插件架构去做代码转换，所以你可以去设计独创的代码转换规则。
 在编写Babel插件之前，大家需要了解一下抽象语法树/AST的知识（熟知编译原理的可以快速跳过）。
 抽象语法树（AST） 抽象语法树是高级编程语言（Java、JavaScript等）转换成机器语言的桥梁。解析器会根据ECMAScript 标准「JavaScript语言规范」来对代码字符串进行词法分析，拆分成一个个词法单元，再遍历各个词法单元进行语法分析构造出AST。我们通过如下代码来分析原理：
-let str = &#39;test&#39;; str + &#39;abc&#39;;  词法分析（Lexical Analysis） 对代码解析时先进入词法分析阶段，tokenizer(分词器)会将原始代码按照特定字符(如let、var、=等保留字)分成一个个叫token的东西。token由分号、标签、变量、字符串等组成，tokenizer将tokens构造成如下数据结构。
+let str = &#39;test&#39;; str + &#39;abc&#39;; 词法分析（Lexical Analysis） 对代码解析时先进入词法分析阶段，tokenizer(分词器)会将原始代码按照特定字符(如let、var、=等保留字)分成一个个叫token的东西。token由分号、标签、变量、字符串等组成，tokenizer将tokens构造成如下数据结构。
 这是一个JavaScript简易编译器中词法分析的实现：https://github.com/jamiebuilds/the-super-tiny-compiler/blob/master/the-super-tiny-compiler.js#L381
 在线词法分析链接
-[ { &amp;quot;type&amp;quot;: &amp;quot;Keyword&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;let&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;Identifier&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;str&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;Punctuator&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;=&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;String&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;&#39;test&#39;&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;Punctuator&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;;&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;Identifier&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;str&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;Punctuator&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;+&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;String&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;&#39;abc&#39;&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;Punctuator&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;;&amp;quot; } ]  语法分析（Syntactic Analysis） 词法分析完毕后进入语法分析阶段，语法分析将tokens重新格式化为描述语法各部分及其相互关系的表示形式，这就是抽象语法树。</description>
+[ { &amp;quot;type&amp;quot;: &amp;quot;Keyword&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;let&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;Identifier&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;str&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;Punctuator&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;=&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;String&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;&#39;test&#39;&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;Punctuator&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;;&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;Identifier&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;str&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;Punctuator&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;+&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;String&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;&#39;abc&#39;&amp;quot; }, { &amp;quot;type&amp;quot;: &amp;quot;Punctuator&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;;&amp;quot; } ] 语法分析（Syntactic Analysis） 词法分析完毕后进入语法分析阶段，语法分析将tokens重新格式化为描述语法各部分及其相互关系的表示形式，这就是抽象语法树。</description>
     </item>
     
   </channel>

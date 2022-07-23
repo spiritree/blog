@@ -1,110 +1,68 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>https://deeptree.ink/tags/babel/</loc>
+    <loc>https://spiritree.github.io/blog/tags/babel/</loc>
     <lastmod>2020-01-28T21:49:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://deeptree.ink/categories/</loc>
+  </url><url>
+    <loc>https://spiritree.github.io/blog/categories/</loc>
     <lastmod>2020-01-28T21:49:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://deeptree.ink/categories/javascript/</loc>
+  </url><url>
+    <loc>https://spiritree.github.io/blog/categories/javascript/</loc>
     <lastmod>2020-01-28T21:49:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://deeptree.ink/post/</loc>
+  </url><url>
+    <loc>https://spiritree.github.io/blog/post/</loc>
     <lastmod>2020-01-28T21:49:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://deeptree.ink/tags/</loc>
+  </url><url>
+    <loc>https://spiritree.github.io/blog/tags/</loc>
     <lastmod>2020-01-28T21:49:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://deeptree.ink/post/2020/01/babel-plugin/</loc>
+  </url><url>
+    <loc>https://spiritree.github.io/blog/post/2020/01/babel-plugin/</loc>
     <lastmod>2020-01-28T21:49:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://deeptree.ink/</loc>
+  </url><url>
+    <loc>https://spiritree.github.io/blog/</loc>
     <lastmod>2020-01-28T21:49:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://deeptree.ink/tags/macos/</loc>
+  </url><url>
+    <loc>https://spiritree.github.io/blog/tags/macos/</loc>
     <lastmod>2019-10-03T22:45:35+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://deeptree.ink/categories/macos/</loc>
+  </url><url>
+    <loc>https://spiritree.github.io/blog/categories/macos/</loc>
     <lastmod>2019-10-03T22:45:35+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://deeptree.ink/post/2019/10/macinstall/</loc>
+  </url><url>
+    <loc>https://spiritree.github.io/blog/post/2019/10/macinstall/</loc>
     <lastmod>2019-10-03T22:45:35+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://deeptree.ink/tags/typescript/</loc>
+  </url><url>
+    <loc>https://spiritree.github.io/blog/tags/typescript/</loc>
     <lastmod>2019-03-13T11:22:55+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://deeptree.ink/categories/typescript/</loc>
+  </url><url>
+    <loc>https://spiritree.github.io/blog/categories/typescript/</loc>
     <lastmod>2019-03-13T11:22:55+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://deeptree.ink/post/2019/03/tsstart/</loc>
+  </url><url>
+    <loc>https://spiritree.github.io/blog/post/2019/03/tsstart/</loc>
     <lastmod>2019-03-13T11:22:55+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://deeptree.ink/tags/2018/</loc>
+  </url><url>
+    <loc>https://spiritree.github.io/blog/tags/2018/</loc>
     <lastmod>2018-12-31T21:53:55+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://deeptree.ink/categories/2018/</loc>
+  </url><url>
+    <loc>https://spiritree.github.io/blog/categories/2018/</loc>
     <lastmod>2018-12-31T21:53:55+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://deeptree.ink/post/2018/12/2018/</loc>
+  </url><url>
+    <loc>https://spiritree.github.io/blog/post/2018/12/2018/</loc>
     <lastmod>2018-12-31T21:53:55+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://deeptree.ink/tags/canvas/</loc>
+  </url><url>
+    <loc>https://spiritree.github.io/blog/tags/canvas/</loc>
     <lastmod>2018-07-17T17:47:01+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://deeptree.ink/categories/html/</loc>
+  </url><url>
+    <loc>https://spiritree.github.io/blog/categories/html/</loc>
     <lastmod>2018-07-17T17:47:01+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://deeptree.ink/post/2018/07/uploadcanvasimg/</loc>
+  </url><url>
+    <loc>https://spiritree.github.io/blog/post/2018/07/uploadcanvasimg/</loc>
     <lastmod>2018-07-17T17:47:01+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://deeptree.ink/post/2018/06/passive/</loc>
+  </url><url>
+    <loc>https://spiritree.github.io/blog/post/2018/06/passive/</loc>
+    <lastmod>2018-06-23T22:42:31+08:00</lastmod>
+  </url><url>
+    <loc>https://spiritree.github.io/blog/tags/%E4%BA%8B%E4%BB%B6/</loc>
     <lastmod>2018-06-23T22:42:31+08:00</lastmod>
   </url>
-  
-  <url>
-    <loc>https://deeptree.ink/tags/%E4%BA%8B%E4%BB%B6/</loc>
-    <lastmod>2018-06-23T22:42:31+08:00</lastmod>
-  </url>
-  
 </urlset>

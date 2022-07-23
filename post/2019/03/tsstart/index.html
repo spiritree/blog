@@ -9,11 +9,10 @@
 		
 		
 		<title>Why and How TypeScript? &middot; 深樹博客</title>
-		<link rel="dns-prefetch" href="https://deeptree.ink" />
 		<link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
-		<link rel="shortcut icon" href="https://deeptree.ink/images/favicon.ico">
-		<link rel="stylesheet" href="https://deeptree.ink/css/style.min.css">
-		<link rel="stylesheet" href="https://deeptree.ink/css/highlight.css">
+		<link rel="shortcut icon" href="https://spiritree.github.io/blog/images/favicon.ico">
+		<link rel="stylesheet" href="https://spiritree.github.io/blog/css/style.min.css">
+		<link rel="stylesheet" href="https://spiritree.github.io/blog/css/highlight.css">
 
 		
 		
@@ -30,11 +29,11 @@
        <nav class="main-nav">
 	
 	
-		<a href='https://deeptree.ink/'> <span class="arrow">←</span>Home</a>
+		<a href='https://spiritree.github.io/blog/'> <span class="arrow">←</span>Home</a>
 	
-	<a href='https://deeptree.ink/post'>Archive</a>
-	<a href='https://deeptree.ink/tags'>Tags</a>
-	<a href='https://deeptree.ink/about'>About</a>
+	<a href='https://spiritree.github.io/blog/post'>Archive</a>
+	<a href='https://spiritree.github.io/blog/tags'>Tags</a>
+	<a href='https://spiritree.github.io/blog/about'>About</a>
 
 	
 
@@ -56,7 +55,7 @@
                       
                       
                           
-                              <a href="https://deeptree.ink/tags/typescript">TypeScript</a>
+                              <a href="https://spiritree.github.io/blog/tags/typescript">TypeScript</a>
                           
                       
                       
@@ -246,23 +245,27 @@ prod: tsc</p>
     
     
         <li>
-            <a href="/post/2020/01/babel-plugin/">深入原理：Babel原理与Babel插件实践<aside class="dates">Jan 28 2020</aside></a>
+            <a href="https://spiritree.github.io/blog/post/2020/01/babel-plugin/">深入原理：Babel原理与Babel插件实践<aside class="dates">Jan 28 2020</aside></a>
         </li>
     
         <li>
-            <a href="/post/2019/10/macinstall/">我的电脑装了什么（2019版）<aside class="dates">Oct 3 2019</aside></a>
+            <a href="https://spiritree.github.io/blog/post/2019/10/macinstall/">我的电脑装了什么（2019版）<aside class="dates">Oct 3 2019</aside></a>
         </li>
     
         <li>
-            <a href="/post/2018/12/2018/">2018年报总结<aside class="dates">Dec 31 2018</aside></a>
+            <a href="https://spiritree.github.io/blog/post/2019/03/tsstart/">Why and How TypeScript?<aside class="dates">Mar 13 2019</aside></a>
         </li>
     
         <li>
-            <a href="/post/2018/07/uploadcanvasimg/">一键上传canvas所生成的图片至CDN<aside class="dates">Jul 17 2018</aside></a>
+            <a href="https://spiritree.github.io/blog/post/2018/12/2018/">2018年报总结<aside class="dates">Dec 31 2018</aside></a>
         </li>
     
         <li>
-            <a href="/post/2018/06/passive/">addEventListener中的passive属性踩坑<aside class="dates">Jun 23 2018</aside></a>
+            <a href="https://spiritree.github.io/blog/post/2018/07/uploadcanvasimg/">一键上传canvas所生成的图片至CDN<aside class="dates">Jul 17 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="https://spiritree.github.io/blog/post/2018/06/passive/">addEventListener中的passive属性踩坑<aside class="dates">Jun 23 2018</aside></a>
         </li>
     
 </ul>
@@ -278,7 +281,7 @@ prod: tsc</p>
     owner: 'spiritree',
     repo: 'blog',
     title: 'Why and How TypeScript?',
-    body: '本文链接:https:\/\/deeptree.ink\/post\/2019\/03\/tsstart\/\n简介:如何低成本且无痛地上手TypeScript\n\n\x3c!-- animate:fadeUp theme:dark align:center --\x3e\n\n# Why TypeScript?\n\n## 业界动态\n\n### Facebook的yarn宣布用TypeScript重写\nhttps:\/\/github.com\/yarnpkg\/yarn\/issues\/6953\n### Facebook的Jest宣布用TypeScript重写\nhttps:\/\/github.com\/facebook\/jest\/pull\/7554\n\n### storybook正在用TypeScript重构中\n### Vue3也在用TypeScript重构中\n\n---\n## Github Trending\n\n[![tsgithub.png](https:\/\/i.loli.net\/2019\/02\/24\/5c72964fc2be3.png)](https:\/\/i.loli.net\/2019\/02\/24\/5c72964fc2be3.png)\n\n---\n\n[![tsgithub2.png](https:\/\/i.loli.net\/2019\/02\/24\/5c72964fbc4e6.png)](https:\/\/i.loli.net\/2019\/02\/24\/5c72964fbc4e6.png)\n\n\n---\n\n### Top 10 JavaScript errors from 1000\x2b projects (Rollbar)\n![1.jpg](https:\/\/i.loli.net\/2019\/02\/08\/5c5d9119814ca.jpg)\n- Uncaught TypeError: Cannot read property，常见于a.b\n- TypeError: ‘undefined’ is not a function，常见于a.b()\n- TypeError: Cannot read property ‘length’，期望是数组\n- ‘X’ is not defined，ReferenceError\n- `num.toFixed(102)`，RangeError\n\n---\n\n![3.png](https:\/\/i.loli.net\/2019\/02\/17\/5c69659a31f88.png)\n\n---\n\n![2.jpg](https:\/\/i.loli.net\/2019\/02\/17\/5c696665f3371.jpg)\n\n---\n\n# That\x27s Why TypeScript\n\n- 提升代码的可读性与可维护性\n   - 编译时报错\n   - 配合VSCode的类型推导提升开发体验\n   - 类型是最好的文档，加上注释后可以一定程度上替代文档\n   - 自动生成index.d.ts（类型定义文件）\n- 社区活跃且是JavaScript名义上的唯一进化方向\n   - 语法广受好评（师承C#）\n   - 大部分热门库\/框架都有类型定义\n- 与JavaScript兼容性良好\n   - JavaScript的超集，.ts和.js可以共存\n\n ---\n \n#  基础类型\n\n```javascript\n\/\/ 字符串\nconst str: string = \x27a\x27\n\/\/ 布尔值\nconst isCC: boolean = true\n\/\/ 数值\nconst LIMIT: number = 10\n\/\/ 空\nfunction consoleStr(): void {\n  console.log(\x27abc\x27)\n}\n\/\/ null and undefined\nconst u: undefined = undefined\nconst n: null = null\n```\n\n---\n\n# 数组\n\n![5.png](https:\/\/i.loli.net\/2019\/02\/17\/5c69700398db7.png)\n\n---\n\n# 函数\n\n![func.png](https:\/\/i.loli.net\/2019\/02\/18\/5c6aaec23466f.png)\n\n---\n\n# 接口（Interface）\n\n在⾯向对象语⾔中，接⼝（Interfaces）是⼀个很重要的概念，它是对⾏为的抽象，⽽具体如何⾏动需要由类 （classes）去实现（implements）。\n\nTypeScript 中的接⼝是⼀个⾮常灵活的概念，除了可⽤于 对类的⼀部分⾏为进⾏抽象以外，也常⽤于对「对象的形状（Shape）」进⾏描述。\n\n---\n\n[![interface1.png](https:\/\/i.loli.net\/2019\/02\/25\/5c73eb0276ee5.png)](https:\/\/i.loli.net\/2019\/02\/25\/5c73eb0276ee5.png)\n\n---\n# 类（Class）\n\nTypeScript 拥有所有⽬前 ECMAScript class 进⼊标准或还在提案的属性。包括继承、getter、setter、静态⽅法、装饰器等。\n\n在这个基础之上⼜添加 public、private 和 protected 三种修饰符。\n\n---\n```javascript\nclass Animal1 {\n  public name: string\n  public constructor(name: string) {\n    this.name = name\n  }\n}\nlet CatA = new Animal1(\x27a\x27)\nconsole.log(CatA.name)\nCatA.name = \x27b\x27\nconsole.log(CatA.name)\n\nclass Animal2 {\n  private name: string\n  public constructor(name: string) {\n    this.name = name\n  }\n}\nlet CatC = new Animal2(\x27c\x27)\nCatC.name = \x27c\x27\n```\n\n---\n\n```javascript\nclass Animal {\n  protected name: string\n  public constructor(name: string) {\n    this.name = name\n  }\n}\n\nclass Cat extends Animal {\n  constructor(name: string) {\n    super(name)\n    console.log(this.name)\n  }\n}\n\n\/\/ protect和private的区别就是protected可以在子类被访问\n```\n\n---\n\n# 泛型（Generics）\n\n泛型（Generics）是指在定义函数、接⼝或类的时候， 不预先指定具体的类型，⽽在使⽤的时候再指定类型的 ⼀种特性。\n\n---\n\n[![generics.png](https:\/\/i.loli.net\/2019\/02\/25\/5c73eb02804c3.png)](https:\/\/i.loli.net\/2019\/02\/25\/5c73eb02804c3.png)\n\n---\n\n# How TypeScript?\n\n## FrontEnd\n@babel\/preset-typescript\n\n## Node.js\ndev: ts-node\nprod: tsc\n\n## Lint\ntypescript-eslint\n\n---',
+    body: '本文链接:https:\/\/spiritree.github.io\/blog\/post\/2019\/03\/tsstart\/\n简介:如何低成本且无痛地上手TypeScript\n\n\u003c!-- animate:fadeUp theme:dark align:center --\u003e\n\n# Why TypeScript?\n\n## 业界动态\n\n### Facebook的yarn宣布用TypeScript重写\nhttps:\/\/github.com\/yarnpkg\/yarn\/issues\/6953\n### Facebook的Jest宣布用TypeScript重写\nhttps:\/\/github.com\/facebook\/jest\/pull\/7554\n\n### storybook正在用TypeScript重构中\n### Vue3也在用TypeScript重构中\n\n---\n## Github Trending\n\n[![tsgithub.png](https:\/\/i.loli.net\/2019\/02\/24\/5c72964fc2be3.png)](https:\/\/i.loli.net\/2019\/02\/24\/5c72964fc2be3.png)\n\n---\n\n[![tsgithub2.png](https:\/\/i.loli.net\/2019\/02\/24\/5c72964fbc4e6.png)](https:\/\/i.loli.net\/2019\/02\/24\/5c72964fbc4e6.png)\n\n\n---\n\n### Top 10 JavaScript errors from 1000\u002b projects (Rollbar)\n![1.jpg](https:\/\/i.loli.net\/2019\/02\/08\/5c5d9119814ca.jpg)\n- Uncaught TypeError: Cannot read property，常见于a.b\n- TypeError: ‘undefined’ is not a function，常见于a.b()\n- TypeError: Cannot read property ‘length’，期望是数组\n- ‘X’ is not defined，ReferenceError\n- `num.toFixed(102)`，RangeError\n\n---\n\n![3.png](https:\/\/i.loli.net\/2019\/02\/17\/5c69659a31f88.png)\n\n---\n\n![2.jpg](https:\/\/i.loli.net\/2019\/02\/17\/5c696665f3371.jpg)\n\n---\n\n# That\u0027s Why TypeScript\n\n- 提升代码的可读性与可维护性\n   - 编译时报错\n   - 配合VSCode的类型推导提升开发体验\n   - 类型是最好的文档，加上注释后可以一定程度上替代文档\n   - 自动生成index.d.ts（类型定义文件）\n- 社区活跃且是JavaScript名义上的唯一进化方向\n   - 语法广受好评（师承C#）\n   - 大部分热门库\/框架都有类型定义\n- 与JavaScript兼容性良好\n   - JavaScript的超集，.ts和.js可以共存\n\n ---\n\n#  基础类型\n\n```javascript\n\/\/ 字符串\nconst str: string = \u0027a\u0027\n\/\/ 布尔值\nconst isCC: boolean = true\n\/\/ 数值\nconst LIMIT: number = 10\n\/\/ 空\nfunction consoleStr(): void {\n  console.log(\u0027abc\u0027)\n}\n\/\/ null and undefined\nconst u: undefined = undefined\nconst n: null = null\n```\n\n---\n\n# 数组\n\n![5.png](https:\/\/i.loli.net\/2019\/02\/17\/5c69700398db7.png)\n\n---\n\n# 函数\n\n![func.png](https:\/\/i.loli.net\/2019\/02\/18\/5c6aaec23466f.png)\n\n---\n\n# 接口（Interface）\n\n在⾯向对象语⾔中，接⼝（Interfaces）是⼀个很重要的概念，它是对⾏为的抽象，⽽具体如何⾏动需要由类 （classes）去实现（implements）。\n\nTypeScript 中的接⼝是⼀个⾮常灵活的概念，除了可⽤于 对类的⼀部分⾏为进⾏抽象以外，也常⽤于对「对象的形状（Shape）」进⾏描述。\n\n---\n\n[![interface1.png](https:\/\/i.loli.net\/2019\/02\/25\/5c73eb0276ee5.png)](https:\/\/i.loli.net\/2019\/02\/25\/5c73eb0276ee5.png)\n\n---\n# 类（Class）\n\nTypeScript 拥有所有⽬前 ECMAScript class 进⼊标准或还在提案的属性。包括继承、getter、setter、静态⽅法、装饰器等。\n\n在这个基础之上⼜添加 public、private 和 protected 三种修饰符。\n\n---\n```javascript\nclass Animal1 {\n  public name: string\n  public constructor(name: string) {\n    this.name = name\n  }\n}\nlet CatA = new Animal1(\u0027a\u0027)\nconsole.log(CatA.name)\nCatA.name = \u0027b\u0027\nconsole.log(CatA.name)\n\nclass Animal2 {\n  private name: string\n  public constructor(name: string) {\n    this.name = name\n  }\n}\nlet CatC = new Animal2(\u0027c\u0027)\nCatC.name = \u0027c\u0027\n```\n\n---\n\n```javascript\nclass Animal {\n  protected name: string\n  public constructor(name: string) {\n    this.name = name\n  }\n}\n\nclass Cat extends Animal {\n  constructor(name: string) {\n    super(name)\n    console.log(this.name)\n  }\n}\n\n\/\/ protect和private的区别就是protected可以在子类被访问\n```\n\n---\n\n# 泛型（Generics）\n\n泛型（Generics）是指在定义函数、接⼝或类的时候， 不预先指定具体的类型，⽽在使⽤的时候再指定类型的 ⼀种特性。\n\n---\n\n[![generics.png](https:\/\/i.loli.net\/2019\/02\/25\/5c73eb02804c3.png)](https:\/\/i.loli.net\/2019\/02\/25\/5c73eb02804c3.png)\n\n---\n\n# How TypeScript?\n\n## FrontEnd\n@babel\/preset-typescript\n\n## Node.js\ndev: ts-node\nprod: tsc\n\n## Lint\ntypescript-eslint\n\n---\n',
     labels: ["TypeScript"],
     clientID: '00a0202c161baf1e3c08',
     clientSecret: '205f6c77990b4e455ef793a28ae45b4506c40ddd',
@@ -293,7 +296,7 @@ prod: tsc</p>
     
     <p class="small">
     
-       © Copyright 2020 <i class="fa fa-heart" aria-hidden="true"></i> 
+       © Copyright 2022 <i class="fa fa-heart" aria-hidden="true"></i> 
     
     </p>
     <p class="small">

@@ -2,57 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 深樹博客</title>
-    <link>https://deeptree.ink/categories/</link>
+    <link>https://spiritree.github.io/blog/categories/</link>
     <description>Recent content in Categories on 深樹博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 28 Jan 2020 21:49:50 +0800</lastBuildDate>
-    
-	<atom:link href="https://deeptree.ink/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 28 Jan 2020 21:49:50 +0800</lastBuildDate><atom:link href="https://spiritree.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JavaScript</title>
-      <link>https://deeptree.ink/categories/javascript/</link>
+      <link>https://spiritree.github.io/blog/categories/javascript/</link>
       <pubDate>Tue, 28 Jan 2020 21:49:50 +0800</pubDate>
       
-      <guid>https://deeptree.ink/categories/javascript/</guid>
+      <guid>https://spiritree.github.io/blog/categories/javascript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>macOS</title>
-      <link>https://deeptree.ink/categories/macos/</link>
+      <link>https://spiritree.github.io/blog/categories/macos/</link>
       <pubDate>Thu, 03 Oct 2019 22:45:35 +0800</pubDate>
       
-      <guid>https://deeptree.ink/categories/macos/</guid>
+      <guid>https://spiritree.github.io/blog/categories/macos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>TypeScript</title>
-      <link>https://deeptree.ink/categories/typescript/</link>
+      <link>https://spiritree.github.io/blog/categories/typescript/</link>
       <pubDate>Wed, 13 Mar 2019 11:22:55 +0800</pubDate>
       
-      <guid>https://deeptree.ink/categories/typescript/</guid>
+      <guid>https://spiritree.github.io/blog/categories/typescript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>2018</title>
-      <link>https://deeptree.ink/categories/2018/</link>
+      <link>https://spiritree.github.io/blog/categories/2018/</link>
       <pubDate>Mon, 31 Dec 2018 21:53:55 +0800</pubDate>
       
-      <guid>https://deeptree.ink/categories/2018/</guid>
+      <guid>https://spiritree.github.io/blog/categories/2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>HTML</title>
-      <link>https://deeptree.ink/categories/html/</link>
+      <link>https://spiritree.github.io/blog/categories/html/</link>
       <pubDate>Tue, 17 Jul 2018 17:47:01 +0800</pubDate>
       
-      <guid>https://deeptree.ink/categories/html/</guid>
+      <guid>https://spiritree.github.io/blog/categories/html/</guid>
       <description></description>
     </item>
     
